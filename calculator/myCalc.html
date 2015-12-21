@@ -4,16 +4,18 @@
 	<meta charset="UTF-8">
 	<title>My Calc</title>
 	<link rel="stylesheet" href="myCalc.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.0/animate.min.css">
 </head>
-<body>
-	<div id="calculator">
+<body class="draggable">
+	<div id="calculator" class="animated flipInY">
+		<b id="push">Push-drag</b>
 	<!--screen and clear key-->
-		<div class="top keys">
+		<div class="top keys hide animated flipInX" id="hide">
 			<div class="screen"></div>
 			<span class="clear">Clear</span>
 		</div>
 		<!--screen and clear key-->
-		<div class="keys">
+		<div class="keys num animated fadeIn" id="num">
 			<span>7</span>
 			<span>8</span>
 			<span>9</span>
@@ -33,4 +35,18 @@
 		</div>
 	</div>
 </body>
+<script>
+	var button = document.getElementById("push");
+	var num = document.getElementById("num");
+	var hide = document.getElementById("hide");
+	var calc = document.getElementById("calculator")
+		button.addEventListener("click", function(e) {
+  		e.preventDefault();
+  		num.classList.toggle("num");
+  		calc.classList.toggle("calculator");
+  		hide.classList.toggle("hide");
+   	});
+</script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/interact.js/1.2.6/interact.min.js"></script>
+<script src="myCalc.js"></script>
 </html>
