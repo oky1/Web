@@ -1,0 +1,54 @@
+/* reset */
+* {	margin:0;padding:0; box-sizing: border-box; font: normal 20px Arial, sans-serif;}
+body{
+	background-image: url(../img/12blur1.jpg);
+	position: relative;
+  	background-attachment: fixed;
+  	background-repeat: repeat;
+  	background-position: top center;
+  	background-size: cover;
+}
+
+/*calc*/
+#calculator {width:340px; height:auto;
+	margin: 100px auto;
+	padding: 20px 20px 9px;
+	background: linear-gradient(rgba(0,48,95, 0.8),rgba(50, 50, 50, 1));
+	border: 1px  solid rgba(255, 255, 255, 0.9);
+	border-radius: 25px;
+	color:#DEf;
+	box-shadow: 10px 10px 60px black;
+	}
+
+/* Clear floats */
+.keys {overflow: hidden;}
+.keys span {float: left; width: 66px; height: 60px;
+	background: rgba(0,0,0, 0.25);
+	margin:0 7px 11px 0;
+	border: 1px  solid rgba(255, 255, 255, 0.15);
+	border-radius: 5px;
+	line-height: 60px;
+	text-align: center;
+	box-shadow: 2px 1px 4px rgba(0, 0, 0, 1);
+	user-select: none;
+	}
+
+/* remove raight margin from operator keys */
+span.operator{margin-right: 0; background-color:rgba(185, 124, 18, 0.5);}
+span.clear {margin:0 0 11px 7px; background-color:rgba(185, 124, 18, 0.5); user-select: none;}
+
+/*screen and clear key*/
+.top .screen {height: 60px;	width:211px; 
+	background: rgba(0, 0, 0, 0.2);	float: left;
+	box-shadow: inset 2px 2px 15px rgba(0, 0, 0, 0.5)
+	}
+
+/* hover */	
+.keys span.operator:hover, 
+.keys span.clear:hover {background-color: rgba(212,325,0, 0.5);color:black;}
+.keys span:hover{background-color: rgba(245,325,300, 0.5);color:black;}
+
+/* active */
+
+
+.keys span:active{box-shadow: 0 0 0 }

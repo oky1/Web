@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculator</title>
+	<style>
+	.container {
+  max-width: 100%;
+}
+
+
+/*button styling and animation */
+.profileButton {
+  background:#3F51B5;
+  width:70px;
+  height:70px;
+  position: fixed;
+  top: 10px;
+  left:76%;
+  border-radius: 100%;
+  z-index:3;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.80);
+  }
+
+  .animateMenu {
+  background:#3F51B5;
+  width:150px;
+  height:70px;
+  position: fixed;
+  top: 10px;
+  left:70.5%;
+  border-radius: 20%;
+  z-index:3;
+  box-shadow: 5px 3px 6px rgba(0,0,0,0.80);
+  }
+
+
+span {
+  background: white;
+  width:40px;
+  display: block;
+  height: 2px;
+  position: absolute;
+  top: 35px;
+  left:15px;
+  transition: transform 0.3s;
+}
+
+/*profile page and animation */
+
+.profilePage {
+  position: absolute;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.8);
+  right:22%;
+  color: white;
+  overflow:hidden;
+  top:15px;
+  background:#00BCD4;
+  font-weight: 300;
+  width:1px;
+  height: 1px;
+  text-align: center;
+  border-radius: 8px;
+  transition: all 0.5s cubic-bezier(0.68,-0.55,0.265,1.55);
+  }
+
+.profileHeight {
+  width: 46%;
+  height: 200px;
+}
+
+.profileHide {
+  display: none;
+}
+	</style>
+</head>
+<body>
+<div class="container">
+      <div id="menuButton" class="profileButton">
+        <span id="menuSpan">
+        &nbsp;
+        </span>
+      </div>
+
+      <div id="profilePage" class="profilePage">
+        <h1>Joseph Palomino</h1>
+        <h2>aspiring Developer</h2>
+      </div>
+    </div>
+</body>
+<script>
+	var button = document.getElementById("menuButton");
+	var menuSpan = document.getElementById("menuSpan");
+	var profilePage = document.getElementById("profilePage");
+
+	button.addEventListener("click", function(e) {
+  		e.preventDefault();
+         menuSpan.classList.toggle("animateMenu");
+         button.classList.toggle("profileButton");
+          menuSpan.classList.toggle("profileButton");
+  profilePage.classList.toggle("profileHeight");
+
+  
+});	
+</script>
+</html>
