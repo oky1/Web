@@ -18,7 +18,8 @@
 
 /* Extra Small Devices, Phones /-xs-/ */
 @media only screen and (max-width : 480px) {
-
+#my img {margin: 30px 70px 30px 90px;}
+.jumbotron {padding: 20px 0 20px 0;}
 }
 
 /* Custom, iPhone Retina */

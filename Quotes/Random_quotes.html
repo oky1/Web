@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Randome quotes</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<style>
+	body {
+		background-image: url(http://www.pixic.ru/i/L0s0K9r40706G7W2.jpg); 
+		position: relative;
+		background-attachment: fixed;
+		background-repeat: repeat;
+		background-position: top center;
+		background-size: cover;
+	}
+	.jumbotron{
+		width: 500px; height:500px;
+		margin: 100px auto 100px auto;
+		background-color: rgba(255,255,255, 0.6);
+		padding:20px;
+		text-align: center;
+	}
+	button:focus {outline: none!important}
+	 #autor {font-size: large; font-style: oblique; font-weight: bold}
+	 
+</style>
+<body>
+<div class="container">
+		<div class="row">
+			<div class="jumbotron">
+			<button class="btn btn-success" id="but">Generate</button>
+				<h1>Random Quotes</h1>
+				<p id="quotes">The more things change, the more they remain... insane.</p>
+				<p><span id="autor">- Michael Fry and T. Lewis -</span></p>
+			</div>
+		</div>
+	</div>	
+</body>
+<script>
+	var but = document.getElementById('but');
+	var quotes =  document.getElementById('quotes'); 
+	var autor = document.getElementById('autor');
+	but.addEventListener("click", function(e) {
+  	e.preventDefault();
+	var arr = ["The time is now, the place is here. Stay in the present. You can do nothing to change the past, and the future will never come exactly as you plan or hope for. *- Dan Millman -","For centuries, theologians have been explaining the unknowable in terms of the-not-worth-knowing. * - H. L. Mencken (1880 - 1956) -","A cynic is a man who, when he smells flowers, looks around for a coffin. *- H. L. Mencken (1880 - 1956) -","We do not need magic to transform our world. We carry all the power we need inside ourselves already. We have the power to imagine better. *- J. K. Rowling -","Love is union with somebody, or something, outside oneself, under the condition of retaining the separateness and integrity of one's own self. *- Erich Fromm (1900 - 1980) -","Human beings are the only creatures that allow their children to come back home. *- Bill Cosby (1937 - ) -"];
+	var arr2 =[];
+for (var i=0, t=arr.length-1; i<t; i++) {
+    var k = (Math.round(Math.random() * t))
+}
+arr2 = arr[k].split("*");
+quotes.innerHTML = (arr2[0]);
+autor.innerHTML = (arr2[1]);
+});
+</script>
+</html>

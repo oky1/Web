@@ -1,0 +1,33 @@
+Главная Мои загрузки О проектеОбратная связь
+
+
+ 
+Хостинг картинок и изображений
+ЗагрузитьДобавить поле С компьютера Из интернета Посмотреть лимиты
+Выберите файл
+
+Изображение: 1
+1600x934 (60 kb)
+Ссылка:
+
+http://www.pixic.ru/i/L0s0K9r40706G7W2.jpg
+[Для ФОРУМОВ] Изображение в тэге [IMG]
+
+[URL=http://www.pixic.ru][IMG]http://www.pixic.ru/i/L0s0K9r40706G7W2.jpg[/IMG][/URL]
+[Для ФОРУМОВ] Превью - увеличение по клику
+
+[URL=http://www.pixic.ru/view.php?img=L0s0K9r40706G7W2.jpg][IMG]http://www.pixic.ru/i/L0s0K9r40706G7W2_preview.jpg[/IMG][/URL]
+HTML: картинка в тексте:
+
+<img src="http://www.pixic.ru/i/L0s0K9r40706G7W2.jpg" border="0">
+HTML: превью - увеличение по клику:
+
+<a href="http://www.pixic.ru/view.php?img=L0s0K9r40706G7W2.jpg" target="_blank"><img src="http://www.pixic.ru/i/L0s0K9r40706G7W2_preview.jpg" border="0" alt="1600x934 (60 kb) title="1600x934 (60 kb)"></a>
+ 
+ 
+
+
+Изображений всего:918642 За сутки: 575
+  Rambler's Top100
+Pixic.RU © 2012
+Хостинг картинок - Фотохостинг - Хостинг фотографий - фотохостинг бесплатно - фотохостинг без регистрации - фотохостинг бесплатный - фотохостинг без рекламы 

@@ -15,8 +15,8 @@
 <!-- navbar -->
      <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-header">
-      <a href="#" class="navbar-brand">Okylich Kostya</a>
-        <button class="navbar-toggle" data-target="#mainMenu" data-toggle="collapse">
+      <a href="#" class="navbar-brand"><img src="img/okyLogGr.png" height="50" width="64" id="logo" alt="logo">Okylich Kostya</a>
+         <button class="navbar-toggle" data-target="#mainMenu" data-toggle="collapse">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -30,9 +30,9 @@
             <a href="#" class='dropdown-toggle' data-toggle='dropdown'>Portfolio 
               <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="http://oky.16mb.com/MYpublic/yellow/">Yellow</a></li>
+                <li><a href="http://oky.16mb.com/MYpublic/yellow/" target="_blank">Yellow</a></li>
                 <li><a href="#">Подменю 2</a></li>
-                <li><a href="#">Подменю 3</a></li>
+                <li><a href="http://codepen.io/oky/full/gPMWxZ/" target="_blank">Calculator</a></li>
                 <li><a href="#">Подменю 4</a></li>
                 <li><a href="#">Подменю 5</a></li>
                 <li class="divider hidden-xs"></li>
@@ -40,10 +40,10 @@
                 <li><a href="#">Подменю 7</a></li>
                 <li><a href="#">Подменю 8</a></li>
                 <li><a href="#">Подменю 9</a></li>
-                <li><a href="#">Подменю 10</a></li>
+                <li><a href="http://codepen.io/oky/full/WrGRPp/" target="_blank">Randome Quotes</a></li>
               </ul>
-          </li>
-        </ul>
+           </li>
+         </ul>
       </div>
     </div>
 <!-- navbar -->
@@ -51,6 +51,7 @@
 <div class="container">
   <div class="row row-centered Hd" id="Hd">
     <div class="col-lg-12">
+            <!--<div id="my" class="animated flipInX"><img class="pull-right" src="../foto.png" alt=""></div>-->
             <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, architecto?</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, pariatur!</p>
             <div class="row" id="buttons">
@@ -70,8 +71,11 @@
   <div class="row">
     <div class="col-lg-12">
       <div class="jumbotron">
+      <div id="jumbIn">
+      <div id="my" class="wow fadeIn" data-wow-offset="40"><img class="pull-left " src="img/foto.png" height="543" width="642" alt=""></div>
         <h2>Hello there my name is Kostya and I am a Multimedia Programmer in Belarus.</h2>
         <p> I design and develop beautiful websites for local and international clients both small and large scale. I develop interactive front-ends with the latest libraries of JavaScript, Html5, CSS3 and MVC frameworks. Some of my favorit: AngularJs, NodeJs, jQuery, Bootstrap.</p>
+      </div>
       </div>
     </div>
   </div>
@@ -88,22 +92,22 @@
                <div class="row" id="Portf">
                <!-- Portfolio img1 -->
                 <div class="col-md-4 col-sm-6 img-zoom-out">
-                     <a href="http://oky.16mb.com/MYpublic/yellow/">
+                     <a href="http://oky.16mb.com/MYpublic/yellow/" target="_blank">
                     <img src="http://oky.16mb.com/MYpublic/yellow.jpg"  alt="yellow">
                       </a>
                 </div>
            <!-- End of Portfolio img1 -->
            <!-- Portfolio img2 -->
                 <div class="col-md-4 col-sm-6 img-zoom-out">
-                    <a href="http://oky.16mb.com">
+                    <a href="http://oky.16mb.com" target="_blank">
                     <img src="http://oky.16mb.com/MYpublic/shi.jpg" alt="shi">
                     </a>
                 </div>
             <!-- End of Portfolio img2 -->
             <!-- Portfolio img1 -->
                 <div class="col-md-4 col-sm-6 img-zoom-out">
-                     <a href="http://oky.16mb.com/MYpublic/yellow/">
-                    <img src="http://oky.16mb.com/MYpublic/yellow.jpg"  alt="yellow">
+                     <a href="http://codepen.io/oky/full/gPMWxZ/" target="_blank">
+                    <img src="http://oky.16mb.com/MYpublic/Calculator.png"   alt="Calculator">
                       </a>
                 </div>
            <!-- End of Portfolio img1 -->
@@ -129,7 +133,7 @@
         </div>
       </div>
       <div class="modal-footer">
-      <button class="btn btn-success " data-dismiss="modal">Закрыть</button></div>
+      <button class="btn btn-success " data-dismiss="modal">Close</button></div>
     </div>
   </div>
 </div>
@@ -138,6 +142,8 @@
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/1.1.6/waypoints.min.js"></script>
-<script src="js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script>new WOW().init();</script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/1.1.6/waypoints.min.js"></script>-->
+<!--<script src="js/main.js"></script>-->
 </html>
