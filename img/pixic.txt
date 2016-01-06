@@ -1,5 +1,4 @@
-Главная Мои загрузки О проектеОбратная связь
-
+Картинка 12blur1
 
  
 Хостинг картинок и изображений
@@ -26,8 +25,41 @@ HTML: превью - увеличение по клику:
  
  
 
+Картинка 12
 
-Изображений всего:918642 За сутки: 575
-  Rambler's Top100
-Pixic.RU © 2012
-Хостинг картинок - Фотохостинг - Хостинг фотографий - фотохостинг бесплатно - фотохостинг без регистрации - фотохостинг бесплатный - фотохостинг без рекламы 
+
+Ссылка:
+
+http://www.pixic.ru/i/n0d0H955A5224276.jpg
+[Для ФОРУМОВ] Изображение в тэге [IMG]
+
+[URL=http://www.pixic.ru][IMG]http://www.pixic.ru/i/n0d0H955A5224276.jpg[/IMG][/URL]
+[Для ФОРУМОВ] Превью - увеличение по клику
+
+[URL=http://www.pixic.ru/view.php?img=n0d0H955A5224276.jpg][IMG]http://www.pixic.ru/i/n0d0H955A5224276_preview.jpg[/IMG][/URL]
+HTML: картинка в тексте:
+
+<img src="http://www.pixic.ru/i/n0d0H955A5224276.jpg" border="0">
+HTML: превью - увеличение по клику:
+
+<a href="http://www.pixic.ru/view.php?img=n0d0H955A5224276.jpg" target="_blank"><img src="http://www.pixic.ru/i/n0d0H955A5224276_preview.jpg" border="0" alt="1600x934 (183 kb) title="1600x934 (183 kb)"></a>
+
+
+
+okyLogGr
+
+Ссылка:
+
+http://www.pixic.ru/i/8080s9053532i279.png
+[Для ФОРУМОВ] Изображение в тэге [IMG]
+
+[URL=http://www.pixic.ru][IMG]http://www.pixic.ru/i/8080s9053532i279.png[/IMG][/URL]
+[Для ФОРУМОВ] Превью - увеличение по клику
+
+[URL=http://www.pixic.ru/view.php?img=8080s9053532i279.png][IMG]http://www.pixic.ru/i/8080s9053532i279_preview.png[/IMG][/URL]
+HTML: картинка в тексте:
+
+<img src="http://www.pixic.ru/i/8080s9053532i279.png" border="0">
+HTML: превью - увеличение по клику:
+
+<a href="http://www.pixic.ru/view.php?img=8080s9053532i279.png" target="_blank"><img src="http://www.pixic.ru/i/8080s9053532i279_preview.png" border="0" alt="64x50 (4 kb) title="64x50 (4 kb)"></a>

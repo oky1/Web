@@ -5,6 +5,7 @@
   <title></title>
   <meta http-equiv="X-UA-Compatible" content='IE=edge'>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/main.css">
@@ -15,7 +16,7 @@
 <!-- navbar -->
      <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-header">
-      <a href="#" class="navbar-brand"><img src="img/okyLogGr.png" height="50" width="64" id="logo" alt="logo">Okylich Kostya</a>
+      <a href="#" class="navbar-brand"><img src="http://oky.16mb.com/MYpublic/Web/okyLogGr.png" height="50" width="64" id="logo" alt="logo">Okylich Kostya</a>
          <button class="navbar-toggle" data-target="#mainMenu" data-toggle="collapse">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -30,41 +31,40 @@
             <a href="#" class='dropdown-toggle' data-toggle='dropdown'>Portfolio 
               <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="http://oky.16mb.com/MYpublic/yellow/" target="_blank">Yellow</a></li>
-                <li><a href="#">Подменю 2</a></li>
-                <li><a href="http://codepen.io/oky/full/gPMWxZ/" target="_blank">Calculator</a></li>
-                <li><a href="#">Подменю 4</a></li>
-                <li><a href="#">Подменю 5</a></li>
+                <li><a href="#portfolio">portfolio slider</a></li>
                 <li class="divider hidden-xs"></li>
+                <li><a href="http://oky.16mb.com/MYpublic/yellow/" target="_blank">Yellow</a></li>
+                <li><a href="http://codepen.io/oky/full/gPMWxZ/" target="_blank">Calculator</a></li>
+                <li><a href="http://codepen.io/oky/full/RroLzJ/">Pomodoro Clock</a></li>
+                <li><a href="http://codepen.io/oky/full/WrGRPp/">Randome Quotes</a></li>
                 <li><a href="#">Подменю 6</a></li>
                 <li><a href="#">Подменю 7</a></li>
                 <li><a href="#">Подменю 8</a></li>
                 <li><a href="#">Подменю 9</a></li>
-                <li><a href="http://codepen.io/oky/full/WrGRPp/" target="_blank">Randome Quotes</a></li>
+                <li> <a href="http://oky.16mb.com" target="_blank">Shi-tsu</a></li>
               </ul>
            </li>
          </ul>
       </div>
     </div>
 <!-- navbar -->
+<!--social-->
 <section>
 <div class="container">
   <div class="row row-centered Hd" id="Hd">
     <div class="col-lg-12">
-            <!--<div id="my" class="animated flipInX"><img class="pull-right" src="../foto.png" alt=""></div>-->
-            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, architecto?</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, pariatur!</p>
+            <h3>Welcome to my life. My name is Kostya</h3>
+            <p> Here you can find information about my recent work.</p>
             <div class="row" id="buttons">
-              <button class="btn btn-success">Github</button>
-              <button class="btn btn-success">Facebook</button>
-              <button class="btn btn-success">FreeCodeCamp</button>
+              <a class="btn btn-success" href="http://github.com/oky1/Web" target="_blank">Github</a>
+              <a class="btn btn-success" href="https://www.facebook.com/konstantin.okulich" target="_blank">Facebook</a>
+              <a class="btn btn-success" href="http://www.freecodecamp.com/oky1" target="_blank">FreeCodeCamp</a>
             </div>
-          
-        </div>
+         </div>
       </div>
     </div>
+<!--social-->
 </section>
-<!--tabs-->
 <section>
 <a name="About"></a>
 <div class="container">
@@ -72,8 +72,8 @@
     <div class="col-lg-12">
       <div class="jumbotron">
       <div id="jumbIn">
-      <div id="my" class="wow fadeIn" data-wow-offset="40"><img class="pull-left " src="img/foto.png" height="543" width="642" alt=""></div>
-        <h2>Hello there my name is Kostya and I am a Multimedia Programmer in Belarus.</h2>
+      <div id="my"><img class="pull-left " src="http://oky.16mb.com/MYpublic/Web/foto.png" height="543" width="642" alt=""></div>
+        <h2>Hello there. I am a Multimedia developer in Belarus.</h2>
         <p> I design and develop beautiful websites for local and international clients both small and large scale. I develop interactive front-ends with the latest libraries of JavaScript, Html5, CSS3 and MVC frameworks. Some of my favorit: AngularJs, NodeJs, jQuery, Bootstrap.</p>
       </div>
       </div>
@@ -83,36 +83,99 @@
 </section>
 <!--tabs-->
 <!--portfolio-->
-     <section id="portfolio" class="bg-light-gray bounds">
-        <div class="container Hd">
-            <div class="row">
-                <div class="col-lg-12 text-center">
+     <section id="portfolio">
+        <div class="container" id="Portf">
+            <div class="row Hd" id="rowPortf">
+                <div class="col-lg-12 text-center" style>
                     <h2>Portfolio</h2>
                     <h3>Some of my recent work.</h3>
-               <div class="row" id="Portf">
-               <!-- Portfolio img1 -->
-                <div class="col-md-4 col-sm-6 img-zoom-out">
-                     <a href="http://oky.16mb.com/MYpublic/yellow/" target="_blank">
-                    <img src="http://oky.16mb.com/MYpublic/yellow.jpg"  alt="yellow">
-                      </a>
-                </div>
-           <!-- End of Portfolio img1 -->
-           <!-- Portfolio img2 -->
-                <div class="col-md-4 col-sm-6 img-zoom-out">
-                    <a href="http://oky.16mb.com" target="_blank">
-                    <img src="http://oky.16mb.com/MYpublic/shi.jpg" alt="shi">
-                    </a>
-                </div>
-            <!-- End of Portfolio img2 -->
-            <!-- Portfolio img1 -->
-                <div class="col-md-4 col-sm-6 img-zoom-out">
-                     <a href="http://codepen.io/oky/full/gPMWxZ/" target="_blank">
-                    <img src="http://oky.16mb.com/MYpublic/Calculator.png"   alt="Calculator">
-                      </a>
-                </div>
-           <!-- End of Portfolio img1 -->
-            </div>
-              </div>
+                      <!--carousel-->
+                      <div id="carousel" class="carousel slide">
+                      <!-- carousel indicators-->
+                          <ol class="carousel-indicators">
+                            <li class='active' data-target="#carousel" data-slide-to="0"></li>
+                            <li data-target="#carousel" data-slide-to="1"></li>
+                            <li data-target="#carousel" data-slide-to="2"></li>
+                            <li data-target="#carousel" data-slide-to="3"></li>
+                          </ol>
+                      <div class="carousel-inner">
+                      <!--item active-->
+                          <div class="devices item active">
+                              <div class="desktop">
+                                  <img src="http://www.pixic.ru/i/n0d0H955A5224276.jpg"  alt="">
+                              </div>
+                              <div class="tablet">
+                                  <img src="http://www.pixic.ru/i/n0d0H955A5224276.jpg"  alt="">
+                              </div>
+                              <div class="mobile">
+                                  <img src="http://www.pixic.ru/i/n0d0H955A5224276.jpg"  alt="">
+                              </div>
+                          </div>
+                          <!--item active-->
+                          <!--item2-->
+                          <div class="devices item">
+                              <div class="desktop">
+                                    <a href="http://oky.16mb.com/MYpublic/yellow/" target="_blank">
+                                      <img src="http://oky.16mb.com/MYpublic/yellow.jpg"  alt="yellow">
+                                   </a>
+                                </div>
+                                <div class="tablet">
+                                   <a href="http://oky.16mb.com/MYpublic/yellow/" target="_blank">
+                                     <img src="http://oky.16mb.com/MYpublic/yellow.jpg"  alt="yellow">
+                                  </a>
+                                </div>
+                                <div class="mobile">
+                                   <a href="http://oky.16mb.com/MYpublic/yellow/" target="_blank">
+                                      <img src="http://oky.16mb.com/MYpublic/yellow.jpg"  alt="yellow">
+                                  </a>
+                                </div>
+                              </div>
+                            <!--item2-->
+                            <!--item3-->
+                            <div class="devices item">
+                              <div class="desktop">
+                                  <a href="http://codepen.io/oky/full/RroLzJ/" target="_blank">
+                                      <img src="http://oky.16mb.com/MYpublic/Web/Pomodoro_Clock.png" alt="shi">
+                                  </a>
+                              </div>
+                              <div class="tablet">
+                                  <a href="http://codepen.io/oky/full/RroLzJ/" target="_blank">
+                                    <img src="http://oky.16mb.com/MYpublic/Web/Pomodoro_Clock.png" alt="shi">
+                                  </a>
+                              </div>
+                              <div class="mobile">
+                                 <a href="http://codepen.io/oky/full/RroLzJ/" target="_blank">
+                                    <img src="http://oky.16mb.com/MYpublic/Web/Pomodoro_Clock.png" alt="shi">
+                                  </a>
+                              </div>
+                            </div>
+                            <!--item3-->
+                            <!--item4-->
+                             <div class="devices item">
+                              <div class="desktop">
+                                  <a href="http://codepen.io/oky/full/gPMWxZ/" target="_blank">
+                                     <img src="http://oky.16mb.com/MYpublic/Calculator.png"   alt="Calculator">
+                                 </a>
+                              </div>
+                              <div class="tablet">
+                                 <a href="http://codepen.io/oky/full/gPMWxZ/" target="_blank">
+                                     <img src="http://oky.16mb.com/MYpublic/Calculator.png"   alt="Calculator">
+                                 </a>
+                              </div>
+                              <div class="mobile">
+                                 <a href="http://codepen.io/oky/full/gPMWxZ/" target="_blank">
+                                     <img src="http://oky.16mb.com/MYpublic/Calculator.png"   alt="Calculator">
+                                 </a>
+                              </div>
+                            </div>
+                        <!--carousel4-->
+                       </div><!--carousel inner-->
+                       <!--control-->
+                       <a href="#carousel" class="carousel-control left" data-slide="prev">
+                        <span class="gluphicon gluphicon-chevron-left"></span></a>
+                        <a href="#carousel" class="carousel-control right" data-slide="next">
+                        <span class="gluphicon gluphicon-chevron-right"></span></a>
+                  </div>
             </div>
          </div>
     </section>
@@ -123,13 +186,13 @@
     <div class="modal-content">
       <div class="modal-header">
           <button data-dismiss="modal" class='pull-right'><i class="fa fa-close"></i></button>
-           <h4 class='modal-title'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, consequuntur!</h4>
+           <h4 class='modal-title'>Contact information:</h4>
       </div>
       <div class="modal-body">
          <video  src="http://oky.16mb.com/MYpublic/videoplayback2.ogg" type="video/ogg"  autoplay loop></video>
          <div class="carousel-caption">
-            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, architecto?</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, pariatur!</p>
+            <h3>Skype: OkylichKostya</h3>
+            <p>mail: Okylich@tut.by</p>
         </div>
       </div>
       <div class="modal-footer">
@@ -142,8 +205,6 @@
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-<script>new WOW().init();</script>
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/1.1.6/waypoints.min.js"></script>-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>-->
 <!--<script src="js/main.js"></script>-->
 </html>

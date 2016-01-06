@@ -7,13 +7,15 @@
 
 /* Medium Devices, Desktops /-md-/*/
 @media only screen and (max-width : 992px) {
-
+.jumbotron {margin: 0  auto;}
+#rowPortf { margin:0 auto;}
 }
 
 /* Small Devices, Tablets /-sm-/*/
 @media only screen and (max-width : 768px) {
 .img-zoom-out {margin: 40px!important}
-#Hd {margin: 100px 0 50px 0; padding: 0 0 50px 0;}
+#Hd {margin: 50px 0 50px 0; padding: 0 0 50px 0;}
+#rowPortf { margin:0 -50px  0 auto;}
 }
 
 /* Extra Small Devices, Phones /-xs-/ */
