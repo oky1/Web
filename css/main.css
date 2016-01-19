@@ -14,7 +14,7 @@ video, img {
 button:focus, a:focus {
   outline:none!important;
   }
-
+button:active {opacity:0.5;}
 section {
   height: 100%;
   position: relative;
@@ -90,7 +90,7 @@ h1,p, h2 {
 
 
 #portfolio {
-  padding-top: 50px
+  padding-top: 50px;
 }
 
 #rowPortf {
@@ -136,7 +136,7 @@ h1,p, h2 {
   z-index: 2;
   position: absolute;
   top: 227px;
-  overflow: hidden
+  overflow: hidden;
 }
 .tablet img {
  width: 212px;

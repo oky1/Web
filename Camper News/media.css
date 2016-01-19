@@ -7,37 +7,28 @@
 
 /* Medium Devices, Desktops /-md-/*/
 @media only screen and (max-width : 992px) {
-.jumbotron {margin: 0  auto;}
-#rowPortf { margin:0 auto;}
+
 }
 
 /* Small Devices, Tablets /-sm-/*/
 @media only screen and (max-width : 768px) {
-.img-zoom-out {margin: 40px!important}
-#Hd {margin: 50px 0 50px 0; padding: 0 0 50px 0;}
-#rowPortf { margin:0 -50px  0 auto;}
+#navBtn {text-align: center!important}
+#myslide1 {max-width: 550px; margin-right: 0!important}
 }
 
 /* Extra Small Devices, Phones /-xs-/ */
 @media only screen and (max-width : 480px) {
-#my img {margin: 30px 70px 30px 90px;}
-.jumbotron {padding: 20px 0 20px 0;}
-.desktop, .mobile {display:none;}
-.tablet {top:0; left:8%}
-.carousel-indicators {left:27%;}
-.carousel-indicators>li, .carousel-indicators>.active {
-	width:2em;height:2em; border-radius: 50%
-}
-.devices {height:422px;}
-#rowPortf { margin:0 auto;}
-#rowPortf h2{margin-left: -50px}
+#myslide1 {margin-right: 25px; max-width: 410px!important;}
+.main-column {
+  -webkit-column-count: 2!important;
+  -moz-column-count: 2!important;
+  column-count: 2!important;
+	}
 }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px) {
-.tablet {top:0; left:5%}
-.carousel-indicators {left:24%;}
-#rowPortf h2{margin-left: -70px}
+
 }
 
 
@@ -55,7 +46,7 @@
 
 /* Small Devices, Tablets/-sm-/*/
 @media only screen and (min-width : 768px) {
-.img-zoom-out {  height: 250px; overflow: hidden;}
+
 }
 
 /* Medium Devices, Desktops /-md-/ */

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>News</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.6/angular-route.min.js"></script>
+  <script src="newsScript.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="main.css">
+</head>
+<body data-ng-app="nApp" data-ng-controller="nCtrl">
+<div class="wrapper"><!--wrapper header-->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div id="header">
+          <div class="pull-left">
+            <h1><a href="#"><strong>N</strong>ews <strong>M</strong>agazine</a></h1>
+            <p id="camp">FreeCodeCamp</p>
+          </div>
+          </div>
+          </div><!--col-md-6-->
+          <div class="col-md-6">
+          <div class="center"><a href="#"><img id="ban" src="http://www.pixic.ru/i/W0s039R6A6d756p9.jpg" border="0" /></a></div>
+          </div>
+          <br class="clearfix" />
+       </div>
+    </div>
+  </div><!--wrapper header-->
+  <!-- nav-->
+  <div class="wrapper" id="nav">
+  <div class="container">
+    <div class="row">
+    <div class="col-md-6 col-sm-8 clearfix" id="navBtn">
+      <ul>
+        <li><button class="btn  hvr-underline-from-left button2" ng-click="order('rank')">Sort by popularity</button></li>
+        <li><button class="btn  hvr-underline-from-left button2" ng-click="order('timePosted')">Sort by date</button></li>
+        <li><button class="btn  hvr-underline-from-left button2" ng-click="order('headline')">Sort by headline</button></li>
+         <!--<li><button class="btn  hvr-underline-from-left button2" ng-click="order('image')">image</button></li>-->
+      </ul>
+       </div>
+       <div class="col-md-6 col-sm-4">
+         <div id="divSearch" class="center">
+            <form action="#">
+                  <input id="mainSerch" type="text" data-ng-model="search" />{{search}}
+                <i  id="btnSearch" class="fa fa-search"></i>
+            </form>
+          </div>
+       </div>
+    </div>
+  </div>
+  </div>
+  <!-- nav-->
+  <!-- content-->
+   <div class="" id="content">
+   <div class="container" >
+    <div class="row">
+    <div class=" col-sm-10 col-md-8 col-lg-7" id="myslide">
+      <div id="myslide1">
+        <!--carousel-->
+        <div id="carousel" class="carousel slide">
+        <!-- carousel indicators-->
+            <ol class="carousel-indicators">
+              <li class='active' data-target="#carousel" data-slide-to="0"></li>
+              <li data-target="#carousel" data-slide-to="1"></li>
+            </ol>
+            <!--slide-->
+            <div class="carousel-inner">
+            <!--slide1-->
+              <div class="item active">
+               <a href="http://codepen.io/oky/full/RroLzJ/" target="_blank">
+                 <img src="http://oky.16mb.com/MYpublic/Web/Pomodoro_Clock.png" alt="shi">
+               </a>
+                <div class="carousel-caption">
+                  <h3>My pomodoro clock</h3>
+                 </div>
+              </div>
+              <!--slide2-->
+              <div class="item">
+                <a href="http://codepen.io/oky/full/gPMWxZ/" target="_blank">
+                   <img src="http://oky.16mb.com/MYpublic/Calculator.png" style="width:600px"  alt="Calculator">
+                 </a>            
+                <div class="carousel-caption">
+                   <h3>My calculator clock</h3>
+                </div>
+              </div>
+            <!--slide2-->
+              <!--carousel control-->
+              <a href="#carousel" class="carousel-control left" data-slide="prev">
+              <span class="gluphicon gluphicon-chevron-left"></span></a>
+              <a href="#carousel" class="carousel-control right" data-slide="next">
+              <span class="gluphicon gluphicon-chevron-right"></span></a>
+            </div>
+            </div>
+     <!--carousel-->  
+      </div>
+        <h3 id="h3title"> More News for You today</h3>
+          <div class="main-column">
+            <div class="main-repeat" data-ng-repeat="user in users | filter:search ">
+              <div class="thumbnail">
+                <a href="{{user.link}}" target="_blank">
+                <img  ng-src="{{user.image}}" err-src="{{user.author.picture}}" style="max-width:100%; min-height:50px;">
+                </a>
+                <div class="caption">
+                  <h3>{{user.headline}}</h3>
+                  <p></p>
+                  <p>Posted in {{user.timePosted | date : format : timezone }}</p>
+                  <p><a href="{{user.link}}" class="btn btn-primary" role="button" target="_blank">Read</a>
+                  <span class="btn btn-default" role="button">Like {{user.rank}}</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    <!--right-column-->
+      <div class="col-sm-12 col-md-4 col-lg-5" id="rightColumn" >
+        <div class="myitem" data-ng-repeat="user in users | limitTo:5 | filter:search ">
+          <a href="{{user.link}}" target="_blank">
+          <img class="itemImg" ng-src="{{user.image}}" err-src="{{user.author.picture}}">
+          </a>
+           <p>{{user.headline}}</p>
+           <p>Popularity - {{user.rank}}</p>
+           <p>{{user.timePosted | date : format : timezone}}</p>
+        </div>
+     </div>
+     <!--right-column-->
+  </div><!--row-->
+  </div><!--container-->
+</div><!--content-->
+</body>
+</html>

@@ -1,0 +1,15 @@
+Ссылка:
+
+http://www.pixic.ru/i/W0s039R6A6d756p9.jpg
+[Для ФОРУМОВ] Изображение в тэге [IMG]
+
+[URL=http://www.pixic.ru][IMG]http://www.pixic.ru/i/W0s039R6A6d756p9.jpg[/IMG][/URL]
+[Для ФОРУМОВ] Превью - увеличение по клику
+
+[URL=http://www.pixic.ru/view.php?img=W0s039R6A6d756p9.jpg][IMG]http://www.pixic.ru/i/W0s039R6A6d756p9_preview.jpg[/IMG][/URL]
+HTML: картинка в тексте:
+
+<img src="http://www.pixic.ru/i/W0s039R6A6d756p9.jpg" border="0">
+HTML: превью - увеличение по клику:
+
+<a href="http://www.pixic.ru/view.php?img=W0s039R6A6d756p9.jpg" target="_blank"><img src="http://www.pixic.ru/i/W0s039R6A6d756p9_preview.jpg" border="0" alt="800x283 (29 kb) title="800x283 (29 kb)"></a>

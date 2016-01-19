@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>phone-tablet-skrollr3</title>
+	<link rel="stylesheet" href="media.css">
+	<link rel="stylesheet" href="main.css">
+	<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">-->
+</head>
+<body>
+	<div id="phone">
+		<img src="../img/mob-fon/phone.png"  
+			height="264" width="130" alt="" 
+			data-0="width:130px; opacity:1"
+			data-10="width:0; opacity:0">
+		<img id="tablet" src="../img/mob-fon/tablet-3.png" 
+			height="264" width="342" alt="" 
+			data-0="width:0px; opacity:0" 
+			data-50="width:342; opacity:1"
+			data-150="width:342px; left:50px"
+			data-300="transform: rotate(0deg); left:30%"
+			data-400="transform: rotate(90deg)"
+			>
+		<!--<img id="tablet1" src="../img/mob-fon/tablet-1.png" 
+			height="264" width="342" alt=""
+			data-300="transform: rotate(0deg); left:30%;"
+			data-400="transform: rotate(90deg);"
+			data-590="opacity:0;";
+			data-600="opacity:1; display:block; z-index:1" 
+			>-->
+			<h1 id="title"> Local  Weather App</h1>
+			<div class="phone-inner"
+				height="171" width="110"
+				data-0="width:110px; opacity:1" 
+				data-10="width:0; opacity:0">
+					<div id="do-time"></div>
+					<p class="blinking-2" style="">Scroll</p>
+					<div class="heart" class=""></div>
+			</div>
+			<div class="tablet-inner" 
+				data-0="width:0px; opacity:0" 
+				data-50="width:285; opacity:1"
+				data-150="width:285px; left:75px"
+				data-200="width:285px; opacity:1; z-index:1; display:block"
+				data-300="transform: rotate(0deg); left:30%"
+				data-400="transform: rotate(90deg);opacity:0"
+				>
+				<p class="blinking-2" style="margin:50px 50px auto">Loading data</p>
+					<div class="heart blinking-2" style="display:none"
+					data-200="display:block" data-400="opacity:0">
+					</div>
+			</div>
+			<!--<div class="tablet-inner2" 
+				data-0="width:0; opacity:0;"
+				data-400="width:0; opacity:0;"
+				data-600="width:215px; height:285px; opacity:1; display:block; z-index:10";
+				>
+			</div>-->
+			<div class="tablet-inner3" 
+				data-0="height:0; opacity:0;"
+				data-400="height:0; opacity:0;"
+				data-600="width:215px; height:285px; opacity:1; display:block; z-index:1";
+				>
+					<h3 id="city"></h3>
+					<div id="forPic"></div>
+					<div class="weather">	
+						<span class="temp"></span>
+						<span class="f" onclick='CelciumToFaringate()'>F</span>
+						<span class="c current" onclick='FaringateToCelcium()'>C</span>
+						<ul>
+						      <li class="fontawesome-leaf">
+						        <span id='wind'></span>
+						      </li>
+						      <li class="fontawesome-tint ">
+						        <span id='humidity'></span>
+						      </li>
+						      <li class="fontawesome-umbrella ">
+						        <span id='rain'></span>
+						      </li>
+						 </ul> 
+					</div>
+			</div>
+	</div>
+	<div class="title-fix"> <!--url(http://oky.16mb.com/MYpublic/Web/12.jpg);--> </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+<script>var s = skrollr.init();</script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="main.js"></script>
+</html>
