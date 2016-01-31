@@ -15,7 +15,7 @@
 @media only screen and (max-width : 768px) {
 .img-zoom-out {margin: 40px!important}
 #Hd {margin: 50px 0 50px 0; padding: 0 0 50px 0;}
-#rowPortf { margin:0 -50px  0 auto;}
+#rowPortf { margin:0 0px  0 auto; overflow: hidden}
 }
 
 /* Extra Small Devices, Phones /-xs-/ */
@@ -24,9 +24,9 @@
 .jumbotron {padding: 20px 0 20px 0;}
 .desktop, .mobile {display:none;}
 .tablet {top:0; left:8%}
-.carousel-indicators {left:27%;}
+.carousel-indicators {left:27%!important;}
 .carousel-indicators>li, .carousel-indicators>.active {
-	width:2em;height:2em; border-radius: 50%
+	width:2em!important; height:2em!important; border-radius: 50%!important;
 }
 .devices {height:422px;}
 #rowPortf { margin:0 auto;}
@@ -55,7 +55,7 @@
 
 /* Small Devices, Tablets/-sm-/*/
 @media only screen and (min-width : 768px) {
-.img-zoom-out {  height: 250px; overflow: hidden;}
+.img-zoom-out {height: 250px; overflow: hidden;}
 }
 
 /* Medium Devices, Desktops /-md-/ */

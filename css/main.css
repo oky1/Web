@@ -1,12 +1,11 @@
  body,html {
   min-height:100%;
-  margin:0pc;
   background:black;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif!important;
   font-size: 16px;
   }
-  
-video, img {
+
+  video, img {
   height:100%; width:100%;
   border-radius: 5px;
   }
@@ -16,7 +15,7 @@ button:focus, a:focus {
   }
 button:active {opacity:0.5;}
 section {
-  height: 100%;
+  min-height: 300px!important;
   position: relative;
   background-attachment: fixed;
   background-repeat: repeat;
@@ -68,9 +67,9 @@ h1,p, h2 {
 #buttons button {margin: 2px;}
 
 /*Joombotron */
-
+#jumbOut {margin-bottom:-30px}
 .jumbotron {
-  background-color: rgba(0, 0, 0, 0.7);;
+  background-color: rgba(0, 0, 0, 0.7)!important;
   margin: 0 100px 0 100px;
   padding:50px 0 50px;
   }
@@ -175,5 +174,5 @@ h1,p, h2 {
 }
 .fixed {
   position: fixed; bottom:0; left:0; 
-  border-radius: 0  30px 0 0
+  border-radius: 0  30px 0 0!important;
 }

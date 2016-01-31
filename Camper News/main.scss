@@ -108,6 +108,8 @@ form {padding:12px; overflow:hidden}
 #btnSearch {color:$style}
 
 /*content */
+.item img {width:100%; border-radius:3px}
+
 #content, html {
   background: linear-gradient( 
     #543958 0%, #a06060 25%, #bea27b 50%, 
@@ -154,7 +156,6 @@ form {padding:12px; overflow:hidden}
   {background-color: $border}
 
 /* main column */
-
 .main-column {
   -webkit-column-count: 3;
   -moz-column-count: 3;

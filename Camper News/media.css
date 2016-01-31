@@ -13,17 +13,17 @@
 /* Small Devices, Tablets /-sm-/*/
 @media only screen and (max-width : 768px) {
 #navBtn {text-align: center!important}
-#myslide1 {max-width: 550px; margin-right: 0!important}
+
 }
 
 /* Extra Small Devices, Phones /-xs-/ */
 @media only screen and (max-width : 480px) {
-#myslide1 {margin-right: 25px; max-width: 410px!important;}
 .main-column {
   -webkit-column-count: 2!important;
   -moz-column-count: 2!important;
   column-count: 2!important;
 	}
+	.container{overflow: hidden}
 }
 
 /* Custom, iPhone Retina */
@@ -41,7 +41,6 @@
 
 /* Extra Small Devices, Phones /-xs-/*/
 @media only screen and (min-width : 480px) {
-
 }
 
 /* Small Devices, Tablets/-sm-/*/

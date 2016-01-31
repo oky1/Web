@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+	<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  	<style>
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500);
+body  {
+  background: gold;
+  font-family: 'Roboto',
+  sans-serif;
+}
+
+#particles-js {
+	position: absolute;
+	background-image: url("");
+  width:100%;
+  height: 100%;
+  z-index: -1;
+}
+
+* {
+   transition:All 1s ease;
+  -webkit-transition:All 1s ease;
+	-moz-transition:All 1s ease;
+	-o-transition:All 1s ease;
+}
+
+.container1, .container2, .container3{
+	border-radius: 5px;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.container1 {
+  background:#fff;
+  margin-top: 170px;
+}
+
+.container2 {
+  background: transparent;
+}
+
+.container3{
+  background:#fff;
+}
+
+.myMovie {
+  background:#fff;
+  border-radius: 5px;
+  padding:15px;
+  text-align: center;
+}
+    
+    /*icons and forms */
+
+#iconS {
+  background-color:transparent; 
+  color:#fff;
+  border-radius: 5px;
+  position:absolute; 
+  top:42px; 
+  right:500px;
+}
+
+.form-control {
+  height:35px; 
+  width:400px;
+  border-top-right-radius: 5px!important;
+  border-bottom-right-radius: 5px!important; }
+    
+#formContr{
+  position:absolute; 
+  top:45px; 
+  right:100px;
+}
+
+#iconR {position: relative;}
+
+@media only screen and (max-width : 520px) {
+.form-control {width:200px}
+#iconS{right:300px}
+}
+
+.fa {
+  font-size: 20px;
+  padding:5px;
+}	
+
+.input-group-addon{height: 25px}
+
+    /* buttons */
+
+.menu-button {
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  transition: 0.4s;
+  position: absolute;
+  right: 50px;
+  top: 30px;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  border-radius: 50%;
+  background-color: #E91E63;
+  color: #FFFFFF;
+  font-size: 24px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+  z-index:9999999;
+}
+.menu-button:hover {
+  background: #d81558;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.28), 0 4px 15px 0 rgba(0, 0, 0, 0.25);
+}
+.menu-button a {
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  transition: 0.4s;
+  opacity: 0;
+  width: 0px;
+  height: 0px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  color: #FFFFFF;
+  font-size: 24px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+}
+.menu-button a:hover {
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.28), 0 4px 15px 0 rgba(0, 0, 0, 0.25);
+}
+
+.menu-button a:nth-child(2), .menu-button a:nth-child(3),
+.menu-button a:nth-child(4), .menu-button a:nth-child(5){
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+.menu-button:hover a:nth-child(2):hover, 
+.menu-button:hover a:nth-child(3):hover,
+.menu-button:hover a:nth-child(4):hover,
+.menu-button:hover a:nth-child(5):hover {
+   -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.menu-button:hover a:nth-child(2):hover {background: #3ea1ec;}
+.menu-button:hover a:nth-child(3):hover {background: #d83a2b;}
+.menu-button:hover a:nth-child(4):hover {background: #323232;}
+.menu-button:hover a:nth-child(5):hover {background: #2D1152;}
+
+.menu-button a:nth-child(2) {
+  -webkit-transition-delay: 0.3s;
+  -moz-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+   background: #55acee;
+}
+.menu-button a:nth-child(3) {
+  -webkit-transition-delay: 0.4s;
+  -moz-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+  background: #dc4e41;
+}
+.menu-button a:nth-child(4) {
+  -webkit-transition-delay: 0.5s;
+  -moz-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+  background: #3F3F3F;
+}
+.menu-button a:nth-child(5) {
+  -webkit-transition-delay: 0.2s;
+  -moz-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+  background: #2D1152;
+}
+
+
+.menu-button:hover a {
+  opacity: 1;
+  width: 50px;
+  height: 50px;
+}
+
+.menu-button:hover a:nth-child(2) {
+  right: 130px;
+  top: 70px;
+}
+
+.menu-button:hover a:nth-child(3) {
+  right: 65px;
+  top: 70px;
+}
+
+.menu-button:hover a:nth-child(4) {
+  right: 0px;
+  top: 70px;
+}
+
+.menu-button:hover a:nth-child(5) {
+  right: 195px;
+  top: 70px;
+}
+
+/*flickr img*/
+.main-column {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+}
+
+/* line 164, main.scss */
+.main-repeat {
+  position: relative;
+  -moz-column-break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  column-break-inside: avoid;
+  padding:10px 20px 10px 20px;
+}
+
+
+	</style>
+</head>
+<body ng-app='myApp' ng-controller='myCtrl' ng-style="myStyle" >
+      <div id="particles-js"></div>
+          <!--iconR-->
+          <div class="row" id='iconR'>
+            <div ng-switch='ctrl.tab' id="iconS" style="">
+              <span ng-switch-default='tab0'></span>
+              <span ng-switch-when='tab1' class="fa">Wiki</span>
+              <span ng-switch-when='tab2' class="fa">Film</span>
+              <span ng-switch-when='tab3' class="fa">Youtube</span>
+               <span ng-switch-when='tab4' class="fa">flickr</span>
+            </div>
+          <!--iconS-->
+          <!--input-group-->
+              <div ng-switch='ctrl.tab' id='formContr' style="">
+                 <input 
+                    class="form-control" 
+                    ng-model='search.searchByYoutube' 
+                    placeholder="search local" 
+                    ng-switch-default='tab0'>
+                <input 
+                    class="form-control" 
+                    ng-model='search.searchByWiki'
+                    ng-init="search.searchByWiki='Wiki'" 
+                    placeholder="Wiki search"  
+                    ng-switch-when='tab1'>
+                <input 
+                    class="form-control" 
+                    ng-model='search.searchByTitle' 
+                    ng-init="search.searchByTitle='Film'" 
+                    placeholder="Video search" 
+                    ng-switch-when='tab2' >
+                <input
+                     class="form-control"
+                     ng-model='search.searchByYoutube' 
+                     placeholder="Youtube search" 
+                     ng-switch-when='tab3'>
+                <input
+                     class="form-control"
+                     ng-model='search.searchByFlickr'
+                     ng-init="search.searchByFlickr='Flickr'" 
+                     placeholder="Flickr search" 
+                     ng-switch-when='tab4'>
+                </div>
+          <!--input-group-->
+         </div>
+            <!--menu-button-->
+              <div class="menu-button"><i class="fa fa-search" style="padding:10px"
+                  value="set background" 
+                  ng-click="ctrl.tab='tab0'; myStyle={'background-color':'gold'}"></i>
+                  <a  value="set background"
+                  ng-click="ctrl.tab='tab1'; myStyle={'background-color':'#7ec0ee'}" ><i class="fa fa-wikipedia-w" ></i></a>
+                  <a value="set background" 
+                  ng-click="ctrl.tab='tab2'; myStyle={'background-color':'coral'}"><i class="fa fa-video-camera" ></i></a>
+                  <a  value="set background" 
+                  ng-click="ctrl.tab='tab3'; myStyle={'background-color':'black'}" ><i class="fa fa-youtube" ></i></a>
+                   <a  value="set background"
+                  ng-click="ctrl.tab='tab4'; myStyle={'background-color':'#2D1152'}" ><i class="fa fa-flickr"></i></a>
+              </div>
+             <!--menu-button-->
+      <!--content-->
+       <div class="container container1">
+            <div class="row">
+             	<div ng-switch='ctrl.tab'>
+								<div ng-repeat='wiki in wikis' ng-switch-when='tab1' class="col-md-6">
+                    <!--<p>{{wiki}}</p>-->
+                  	<h4>{{wiki.name}}</h4>
+                    <p>{{wiki.snip}}</p><a href="{{wiki.link}}" target='_blank'>Read More 
+                   </a>
+                </div>
+             </div>
+          </div><!--row-->
+        </div><!--container-->
+         <div class="container container2">
+              <div ng-switch='ctrl.tab' class="row col-md-12">
+                <div ng-repeat='movie in movies' ng-switch-when='tab2' class="col-md-offset-4 col-md-6 myMovie">
+                    <h4>{{movie.Error}}</h4>
+                    <h4>{{movie.Title}}</h4>
+                    <p>{{movie.Plot}}</p>
+                    <p>{{movie.Year}}</p>
+                    <p>{{movie.Runtime}}</p>
+                </div>
+             </div><!--row-->
+        </div><!--container-->
+         <div class="container container2">
+              <div ng-switch='ctrl.tab' class="row col-md-12">
+                <div ng-model='message' ng-switch-when='tab3' class="col-md-offset-4 col-md-6 myMovie">
+                    <h4>{{message}}</h4>
+                </div>
+             </div><!--row-->
+        </div><!--container-->
+         <div class="container container3">
+              <div ng-switch='ctrl.tab' class="main-column">
+                <div class="row">
+                  <div ng-repeat='picture in flickr.photos.photo' ng-switch-when='tab4' class="main-repeat" >
+                       <div class="thumbnail">
+                          <img ng-src="https://farm{{picture.farm}}.staticflickr.com/{{picture.server}}/{{picture.id}}_{{picture.secret}}_m.jpg">
+                            <div class="caption">
+                              <p>{{picture.title}}</p>
+                            </div>
+                         </div>
+                  </div>
+                </div><!--row-->
+             </div>
+        </div><!--container-->
+     </body>
+<script>
+  angular.module('myApp', [])
+  .controller('myCtrl', ['$scope', '$http', function($scope, $http){ 
+    $scope.search = {};
+    //Flickr search
+      $scope.$watch('search.searchByFlickr', function(){
+      $http({
+          method: 'GET',
+          url: 'https://api.flickr.com/services/rest',
+          params: {
+          method: 'flickr.photos.getRecent',
+          api_key: '20922b59e9a00e715d66caaa0237153c',
+          text: $scope.searchByFlickr,
+          format: 'json',
+          per_page: 10,
+          nojsoncallback: 1
+        }
+      }).success(function(data){
+          $scope.flickr=data;
+          console.log(data);
+      })
+    });
+    //Film search
+    $scope.$watch('search.searchByTitle', function(){
+        $http.get("http://www.omdbapi.com/?t=" + $scope.search.searchByTitle+ "&y=&plot=full&r=json").success(function(data){
+            $scope.movies=[];
+            $scope.movies.push(data);
+            // console.log($scope.search.searchByTitle);
+           })
+    });
+    //Wiki search
+  $scope.$watch('search.searchByWiki', function(){
+    var wikiApi = "https://en.wikipedia.org/w/api.php?action=opensearch&limit=10&search="+
+        $scope.search.searchByWiki+"&callback=JSON_CALLBACK";
+          $http.jsonp(wikiApi).success(function(data) {
+            $scope.wikis = [];
+             for(var i = 0; i <= data[1].length -1; i++){
+                var d = {};
+                d.name = data[1][i];
+                d.snip = data[2][i];
+                d.link = data[3][i];
+                $scope.wikis.push(d);
+              }
+            })
+      //console.log($scope.wikis);
+    }); 
+    $scope.message = 'Maybe later';
+  }]);
+
+	/* particles */
+
+particlesJS("particles-js",
+ {
+  "particles": {
+    "number": {
+      "value": 40,
+      "density": {
+        "enable": false,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "star",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.2,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 30,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": false,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 3,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": false,
+        "mode": "repulse"
+      },
+      "onclick": {
+        "enable": false,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 400,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+}
+);
+</script>
+</html>
