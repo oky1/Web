@@ -1,0 +1,141 @@
+/*menus,  buttons */
+.button2 {
+  padding: 0.55em 1em !important; }
+
+.red {
+  color: red; }
+
+#load-more {
+  background: #1585cf;
+  color: white;
+  border: 1px solid white;
+  margin: 20px 0 20px 0; }
+
+.menu-a {
+  padding: 0.7rem 1rem;
+  line-height: 1;
+  color: #2199e8; }
+
+.menu-a:hover,
+.menu-a:focus {
+  color: #1585cf;
+  outline: 0; }
+
+.img img {
+  height: 200px; }
+
+/* social */
+#social {
+  background: rgba(21, 133, 207, 0.2);
+  padding: 15px;
+  border-radius: 5px; }
+
+/* my thumbnail */
+.my-thumb-title {
+  background-color: #e6e6e6;
+  height: 32px;
+  overflow: hidden; }
+
+.my-thumb-text {
+  height: 100px;
+  line-height: 1.1em;
+  overflow: hidden; }
+
+/* log In*/
+#log-img {
+  border: none;
+  margin-top: 30px;
+  box-shadow: none; }
+
+#log-buttons {
+  margin: 10px 0 -15px 0; }
+
+/* banner */
+#ban-img {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  padding: 50px 0 50px 0; }
+
+/* search */
+#search-row {
+  margin-top: 15px; }
+
+#search-header {
+  color: #2199e8; }
+
+/* canvas */
+.offcanvas-top {
+  position: relative;
+  overflow: hidden;
+  height: 3.2em;
+  -webkit-transition: height 0.5s ease-out;
+  -moz-transition: height 0.5s ease-out;
+  -o-transition: height 0.5s ease-out;
+  transition: height 0.5s ease-out; }
+
+.offcanvas-top.active {
+  height: 13.6em; }
+
+.o-content {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 1em 1em 2.5em;
+  background: rgba(0, 0, 0, 0.6); }
+
+.crumbs li a {
+  display: block;
+  padding: 1em;
+  border-bottom: 1px solid #000; }
+
+.crumbs li:last-child a {
+  border-bottom: 0; }
+
+#trigger {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+  font-size: 1em;
+  padding: 0 1em 1em;
+  outline: 0; }
+
+.myh5 {
+  position: absolute;
+  margin: 0.5em 0 0 0;
+  padding-left: 0.5em;
+  z-index: 1; }
+
+.adv {
+  min-height: 100vh; }
+
+#registration {
+  background-color: rgba(0, 0, 0, 0.6); }
+
+.myinput,
+.myinput:focus,
+.myinput:hover {
+  border: 0;
+  border-bottom: 1px solid #2199e8;
+  color: #8a8a8a;
+  background-color: rgba(0, 0, 0, 0.6); }
+
+.myinput:focus {
+  box-shadow: none !important; }
+
+/* off-canvas */
+@media screen and (min-width: 40em) {
+  .row-lg {
+    max-width: 85rem;
+    margin-left: auto;
+    margin-right: auto; } }
+
+@media only screen and (max-width: 600px) {
+  #registration {
+    margin-left: 5rem;
+    margin-right: 5rem; } }
+
+/*footer*/
+@media only screen and (min-width: 480px) {
+  #partners {
+    float: right; } }

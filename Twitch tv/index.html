@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Material</title>
+	<!--<link rel="stylesheet" href="http:////maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+	<style>
+	@import url(http://fonts.googleapis.com/css?family=Roboto:400,300);
+body {
+  font: 16px 'Roboto', sans-serif;
+  background: #ececec;
+}
+a {text-decoration: none}
+
+.card {
+  position: relative;
+  width: 400px;
+  height: 100%;
+  margin: 2em auto;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.notifications {
+  height: 20px;
+  background-color: #303F9F;
+}
+
+.card-header {
+  background-color: #3F51B5;
+  padding: 0 60px;
+  height: 55px;
+  position: relative;
+  box-shadow: 0 11px 23px 0 #7a7a7a, 0 6px 11px 0 #a0a0a0;
+}
+.card-header h1 {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: 18px;
+  color: white;
+  line-height: 55px;
+}
+
+.hamburger {
+  position: absolute;
+  top: 17px;
+  left: 15px;
+  height: 20px;
+  width: 17px;
+}
+.hamburger div {
+  height: 1.5px;
+  background: rgba(255, 255, 255, 0.75);
+  margin: 3px -5px;
+}
+
+.menu-btn {
+  background: #e91e63;
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  line-height: 46px;
+  text-align: center;
+  color: white;
+  font-size: 36px;
+  font-weight: 300;
+  border-radius: 50%;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
+  top: 50px;
+  right: 20px;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+.menu-btn:hover{
+  -webkit-transform: scale(1.12);
+          transform: scale(1.12);
+}
+
+.menu {
+  z-index: 999;
+  position: absolute;
+  top: 90px;
+  right: 55px;
+  background: #ececec; 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+  -webkit-clip-path: circle(0 at 87% -87%);
+          clip-path: circle(0 at 87% 87%);
+
+  box-shadow: 0 3px 10px 0 #7a7a7a, 0 6px 11px 0 #fff;
+}
+.menu ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.menu li {
+  display: block;
+  padding: 10px;
+  text-align: left;
+  width: 100px;
+  margin: 2px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 10px;
+  font-weight: 600;
+  -webkit-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+  cursor: pointer;
+}
+.menu li:last-of-type {
+  border: 0px;
+}
+.menu li:hover {
+  opacity:0.8;
+}
+
+.menu-btn:hover + .menu,
+.menu:hover {
+  opacity: 1;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  -webkit-clip-path: circle(130% at 65% 65%);
+          clip-path: circle(130% at 65% 65%);
+  		  background: white;
+}
+* {
+   transition:All 1s ease;
+  -webkit-transition:All 1s ease;
+	-moz-transition:All 1s ease;
+	-o-transition:All 1s ease;
+}
+
+/*thumbnail*/
+
+img {
+ width: 50px; 
+ height:50px;
+ border-radius:50%;
+ padding: 5px 5px 0 5px;
+}
+
+/* clearfix */
+.outer {
+  *zoom: 1;
+  margin:auto;
+}
+.outer:after {
+  content:"";
+  display:table;
+  clear:both;
+}
+
+.outer {
+  width: 100%;
+  border: 1px solid gray;
+  padding:1%;
+}
+
+/* begin image-text css */
+.thumbnail {
+  display:table-cell;
+  vertical-align:middle;
+  min-width:40%;
+
+ }
+
+.content {
+  min-width: 250px;
+  min-height: 50px;
+  width: auto;
+  display:table-cell;
+  vertical-align:middle;
+  padding:5px;
+  border-bottom: 1px solid #F3F1F1;
+}
+
+.container {
+  margin-right:1%;
+  margin-bottom: 1%;
+  /*border: 3px solid grey;*/
+  border: 3px solid transparent;
+  min-width: 100%;
+  overflow:hidden;
+  max-width:23.3%;
+  text-align: center;
+ }
+
+.online {
+  color: mediumseagreen;
+}
+
+.offline {
+  color: black;
+  opacity: 0.3;
+  filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+}
+span {color: black;}
+
+	</style>
+</head>
+<body data-ng-app='materialApp' data-ng-controller="materialCtrl">
+	<div class="card">
+	  <div class="notifications" ng-style="notifications"></div>
+	  <div class="card-header" ng-style="cardHeader">
+	      <h1>Twitch tv</h1>
+	  </div>
+	  <div class="menu-btn" ng-style="menuBtn">
+	  	<div class="hamburger">
+	      <div class="top-bun"></div>
+	      <div class="meat"></div>
+	      <div class="bottom-bun"></div>
+	    </div>
+	  </div>
+	  <div class="menu">
+	    <ul style="padding: 0 10px 0 10px">
+	      <li value="set background";
+              ng-click="ctrl.tab='tab1'; cardHeader={'background-color':'#303F9F'}; 
+              notifications={'background-color':'#3F51B5'};
+              menuBtn={'background-color':'#1A237E'}"
+              >ALL</li>
+
+	      <li value="set background";
+              ng-click="ctrl.tab='tab2'; cardHeader={'background-color':'#00796B'};
+              notifications={'background-color':'#00897B'};
+              menuBtn={'background-color':'#004D40'}">
+              ONLINE</li>
+
+	      <li value="set background";
+              ng-click="ctrl.tab='tab3'; cardHeader={'background-color':'#424242'};
+              notifications={'background-color':'#616161'};
+              menuBtn={'background-color':'black'}"><!-- #CC0000 #FF4444-->
+              OFFLINE</li>
+	    </ul>
+	  </div>
+	<!--ng-switch-->
+	 <div  ng-switch='ctrl.tab' ng-cloak style="padding:30px 30px 30px 25px; height:100%">
+	 	<!-- tab1 -->
+	 	<div ng-switch-default='tab1' class="container" ng-repeat="user in users">
+	 		<a ng-href="http://www.twitch.tv/{{user.username}}" target="_blank">
+		 	  <div class="thumbnail">
+		 	  	<img ng-src="{{user.logo ? user.logo : 'http://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/200px-No_image_available.svg.png'}}"/><!--class='{{user.status}}'-->
+		 	  </div>
+  				<div class="content">
+  					<span class="name {{user.status}}">{{user.name}}</span>
+  					<!--<span class="stream">{{user.stream}}</span>-->
+  					<i class="material-icons {{user.status}} status" style="float:right" aria-hidden="true" >perm_identity</i>
+  				</div>
+  			</a>
+		</div>
+		 	<!-- tab2 -->
+	 	<div ng-switch-when='tab2' class="container" ng-repeat="user in users | filter:'online'">
+	 		<a ng-href="http://www.twitch.tv/{{user.username}}" target="_blank">
+		 	  <div class="thumbnail">
+		 	  	<img ng-src="{{user.logo ? user.logo : 'http://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/200px-No_image_available.svg.png'}}" class='{{user.status}}'/>
+		 	  </div>
+  				<div class="content">
+  					<span class="name {{user.status}}">{{user.name}}</span>
+  					<!--<span class="stream">{{user.stream}}</span>-->
+  					<i class="material-icons {{user.status}} status" style="float:right" aria-hidden="true" >perm_identity</i>
+  				</div>
+  			</a>
+		</div>
+	 	<!-- tab3 -->
+	 <div ng-switch-when='tab3' class="container" ng-repeat="user in users | filter:'offline'">
+	 		<a ng-href="http://www.twitch.tv/{{user.username}}" target="_blank">
+		 	  <div class="thumbnail">
+		 	  	<img ng-src="{{user.logo ? user.logo : 'http://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/200px-No_image_available.svg.png'}}" class='{{user.status}}'/>
+		 	  </div>
+  				<div class="content">
+  					<span class="name {{user.status}}">{{user.name}}</span>
+  					<!--<span class="stream">{{user.stream}}</span>-->
+  					<i class="material-icons {{user.status}} status" style="float:right" aria-hidden="true" >perm_identity</i>
+  				</div>
+  			</a>
+		</div>
+	 </div>
+	</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+<script>
+ angular.module('materialApp', []).
+ 		controller('materialCtrl', ['$scope', '$http', function($scope, $http){
+ 			  $scope.users = [];
+	    		var users = ["freecodecamp", "medrybw", "storbeck", "chuah48263",
+	    					 "terakilobyte", "habathcx", "RobotCaleb", "comster404",
+	    					 "brunofin", "thomasballinger", "noobs2ninjas", "beohoff"
+	    					 ];
+	  			var requests = [];
+  				for (var i in users) {
+  		  requests.push([$http.jsonp('https://api.twitch.tv/kraken/streams/' + users[i] + '?callback=JSON_CALLBACK'), $http.jsonp('https://api.twitch.tv/kraken/users/'
+  		  		 + users[i] + '?callback=JSON_CALLBACK')]);
+		//console.log(requests);
+  		};
+  		function callback(element, index, array) {
+  			 var temp = {};
+   				 array[index][0].success(function(data) {
+     		 var streaming = (data.stream === null) ? false : true;
+			      if (streaming) {
+			        temp.status = "online";
+			      } else {
+			        temp.status = "offline";
+			       };
+    		});
+		   	 array[index][1].success(function(data) {
+			      temp.name = data.display_name;
+			      temp.logo = data.logo;
+			      temp.username = data.name;
+		    });
+   			 $scope.users.push(temp);
+  };
+
+  requests.forEach(callback);
+
+  $scope.title = "Twitch Status";
+	}]);
+</script>
+</html>

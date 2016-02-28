@@ -6,16 +6,16 @@
 	<link rel="stylesheet" href="myCalc.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.0/animate.min.css">
 </head>
-<body class="draggable">
+<body>
 	<div id="calculator" class="animated flipInY">
-		<b id="push">Push-drag</b>
+		<b>Gooo!</b>
 	<!--screen and clear key-->
-		<div class="top keys hide animated flipInX" id="hide">
+		<div class="top keys animated" id="topKeys">
 			<div class="screen"></div>
 			<span class="clear">Clear</span>
 		</div>
 		<!--screen and clear key-->
-		<div class="keys num animated fadeIn" id="num">
+		<div class="keys">
 			<span>7</span>
 			<span>8</span>
 			<span>9</span>
@@ -30,23 +30,18 @@
 			<span class="operator ">÷</span>
 			<span>0</span>
 			<span style="font-size:25px">.</span>
-			<span class="eval">=</span>
+			<span class="eval" id="eval">=</span>
 			<span class="operator ">x</span>
 		</div>
 	</div>
-</body>
 <script>
-	var button = document.getElementById("push");
-	var num = document.getElementById("num");
-	var hide = document.getElementById("hide");
-	var calc = document.getElementById("calculator")
-		button.addEventListener("click", function(e) {
+var btn = document.getElementById("eval");
+var topKeys = document.getElementById("topKeys")
+  btn.addEventListener("click", function(e) {
   		e.preventDefault();
-  		num.classList.toggle("num");
-  		calc.classList.toggle("calculator");
-  		hide.classList.toggle("hide");
-   	});
+  topKeys		.classList.toggle("flipInX");
+ });
 </script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/interact.js/1.2.6/interact.min.js"></script>
+</body>
 <script src="myCalc.js"></script>
 </html>

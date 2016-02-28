@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Games | Welcome</title>
+    <link rel="stylesheet" href="min/min-css/min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+</head>
+<body data-ng-app='myApp' data-ng-controller='myCtrl'>
+    <div class="title-bar">
+        <!-- off-canvas -->
+        <div id="pattern" class="pattern">
+            <div class="offcanvas-top row-lg">
+                <h5 class="myh5">Chose Your Game</h5>
+                <div class="o-content">
+                    <!--up menu-->
+                    <div class="row expanded callout secondary">
+                        <div class="medium-6 medium-offset-3 large-4 large-offset-0 columns">
+                            <h4>SOCIAL IMAGES</h4>
+                            <div id="social" class="row small-up-4">
+                                <div class="column">
+                                    <a href="#"><img src="min/min-img/facebook.png" alt="facebook"></a>
+                                </div>
+                                <div class="column">
+                                    <a href="#"><img src="min/min-img/google+.png" alt="google+"></a>
+                                </div>
+                                <div class="column">
+                                    <a href="#"><img src="min/min-img/twitt.png" alt="twitter"></a>
+                                </div>
+                                <div class="column">
+                                    <a href="#"><img src="min/min-img/youtube.png" alt="youtube"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="large-4 columns">
+                            <h4>LETS PLAY GAMES</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti quam voluptatum vel repellat ab similique molestias molestiae ea omnis eos.</p>
+                        </div>
+                        <div id="links" class="large-4 columns">
+                            <h4>CATEGOTRY LINKS</h4>
+                            <a href="http://store.giantbomb.com" target="_blank" class="button2 button">Store</a>
+                            <a href="http://www.giantbomb.com/news" target="_blank" class="button2 button">News</a>
+                            <a href="http://www.giantbomb.com/new-games" target="_blank" class="button2 button">New games</a>
+                            <a href="http://www.giantbomb.com/videos" target="_blank" class="button2 button">Videos</a>
+                            <a href="http://www.giantbomb.com/reviews" target="_blank" class="button2 button">Reviews</a>
+                            <a href="http://www.giantbomb.com/podcasts" target="_blank" class="button2 button">Podcast</a>
+                            <a href="http://www.giantbomb.com/users" target="_blank" class="button2 button">Users</a>
+                            <a href="http://www.giantbomb.com/forums" target="_blank" class="button2 button">Forums</a>
+                        </div>
+                    </div>
+                    <!--up menu-->
+                </div>
+            </div>
+        </div>
+        <!-- off-canvas -->
+    </div>
+    <!-- top-bar -->
+    <div class="top-bar row-lg" id="realEstateMenu">
+        <div class="row">
+            <div class="top-bar-left advertising" style="display:none">
+                <ul class="menu">
+                    <li class="menu-text">Pagination</li>
+                    <li>
+                        <button class="menu-a" data-ng-disabled="currentPage == 0" data-ng-click="currentPage=currentPage-1" data-ng-cloak>Previous</button>
+                    </li>
+                    <li>
+                        <button class="menu-a" data-ng-disabled="currentPage >= data.length/pageSize - 1" data-ng-click="currentPage=currentPage+1" data-ng-cloak>Next</button>
+                    </li>
+                    <li data-ng-cloak>{{currentPage+1}}/{{numberOfPages()}}</li>
+                </ul>
+            </div>
+            <div class="top-bar-right">
+                <ul class="menu">
+                    <li><span class="menu-a">hide-show</span></li>
+                    <li><a class="button" id="advertising">Banner</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- top-bar -->
+    <br>
+    <!-- advertising-->
+    <div class="row advertising adv text-center">
+        <div class="medium-7 large-6 columns">
+            <h1 class="red animated rubberBand">Open Your Eyes and Open Your Mind</h1>
+            <p class="subheader">Find arcade games, puzzle games, funny games, sports games, shooting. 
+            Search news, reviews, previews, movies, computer and console video games.</p>
+            <a href="#search-row" class="button">Lets search</a>
+            <a href="#search-row" class="button">Lets find</a>
+        </div>
+        <div class="show-for-large large-3 columns">
+            <img class="animated fadeIn" src="min/min-img/logo-blue.jpg" alt="logo-blue">
+        </div>
+        <div class="medium-5 large-3 columns">
+            <div class="callout secondary" id="registration">
+                <form>
+                    <div class="row">
+                        <div class="small-12 columns ">
+                            <div class="column"><img class="thumbnail animated fadeIn" id="log-img" src="min/min-img/users-1.png" alt="users"></div>
+                        </div>
+                        <div class="small-12 columns" id="log-buttons">
+                            <a class="button">Log In</a>
+                            <a class="button">Sign In</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row column"></div>
+        <div id="ban-img" class="row columns text-center animated fadeIn"> <img src="min/min-img/OurWorld-Cheat-Tool.jpg" alt="OurWorld-Cheat"></div>
+    </div>
+    <!-- advertising-->
+    <!-- search-->
+    <div class="row column large-6" id="search-row">
+        <div class="small-6 medium-6 large-6 column">
+            <span id="search-header" class="lead subheader float-right">Find Your Favorite Game</span>
+        </div>
+        <div class="small-6 medium-6 large-6 column">
+            <input class="myinput " type="text" data-ng-model='search.searchByGiantbomb' data-ng-init="search.searchByGiantbomb='mario'">
+        </div>
+    </div>
+    <!-- search-->
+    <!-- thumb-->
+    <div class="row small-up-1 medium-up-2 large-up-3" data-ng-cloak>
+        <div class="column" data-ng-repeat="game in games | startFrom:currentPage*pageSize | limitTo:pageSize">
+            <div class="callout img">
+                <p class="lead my-thumb-title">{{game.name}}</p>
+                <p><img src="#" class="animated fadeIn" data-ng-src="{{game.image.medium_url}}" alt="Image of a game not available now."></p>
+                <p class="my-thumb-text">{{game.deck}}</p>
+                <a class="button" data-ng-href="{{game.site_detail_url}}" target='_blank'>Reed more</a>
+            </div>
+        </div>
+    </div>
+    <!--thumb-->
+    <div class="row column">
+        <button id="load-more" class="button hollow expanded" data-ng-disabled="currentPage >= data.length/pageSize - 1" data-ng-click="currentPage=currentPage+1">Load More</button>
+    </div>
+    <!--footer-->
+    <footer>
+        <div class="row">
+            <div class="medium-6 columns">
+                <ul class="menu" id="partners">
+                    <li><a href="#">Legal</a></li>
+                    <li><a href="#">Partner</a></li>
+                    <li><a href="#">Explore</a></li>
+                </ul>
+            </div>
+            <div class="medium-6 columns">
+                <ul class="menu float-left">
+                    <li class="menu-a">&nbsp;&nbsp;&copy;&nbsp;&nbsp;Copyright&nbsp;&nbsp;2016</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!--footer-->
+    <!--<script src='min/min-js/all.min.js'></script>-->
+    <script>
+//moove background
+$('body').mousemove(function(e) {
+    var x = (e.pageX * -1 / 5),
+        y = (e.pageY * -1 / 5);
+    $(this).css('background-position', x + 'px ' + y + 'px');
+});
+//get data
+angular.module('myApp', [])
+    .controller('myCtrl', ['$scope', '$http', function($scope, $http) {
+        // $scope.search = {};
+        $scope.$watch('search.searchByGiantbomb', function() {
+            $scope.find = "resources=game";
+            $http.jsonp("http://www.giantbomb.com/api/search/?api_key=ab526aeb8927f41a3a0c9ae8a048082af18a7f97&format=jsonp&limit=45&" + $scope.find + "&query=" + $scope.search.searchByGiantbomb + "&json_callback=JSON_CALLBACK").success(function(data) {
+                $scope.games = [];
+                for (i = 0; i < data.results.length; i++) {
+                    $scope.games.push(data.results[i]);
+                    //console.log(data);
+                }
+                //console.log($scope.games);
+            });
+        });
+        $scope.currentPage = 0;
+        $scope.pageSize = 9;
+        $scope.data = [];
+        $scope.numberOfPages = function() {
+            return Math.ceil($scope.data.length / $scope.pageSize);
+        };
+        for (var i = 0; i < 45; i++) {
+            $scope.data.push("Item Number " + i);
+        }
+    }]).
+filter('startFrom', function() {
+    return function(input, start) {
+        if (!input || !input.length) {
+            return;
+        }
+        start = +start; //parse to int
+        return input.slice(start);
+    };
+});
+// offCanvas
+(function(w) {
+    var $container = $('.offcanvas-top'),
+        $cHeight = $('.o-content').outerHeight();
+    $(document).ready(function() {
+        buildCanvas();
+    });
+
+    function buildCanvas() {
+        $('<a href="#" id="trigger">More +</a>').appendTo($container);
+
+        $('#trigger').bind('click', function(e) {
+            e.preventDefault();
+            var $this = $(this);
+            $container.toggleClass('active');
+            if ($container.hasClass('active')) {
+                $container.height($cHeight);
+                $this.text('Hide -');
+                $('h5').hide();
+            } else {
+                $container.height(50);
+                $this.text('More +');
+                $('h5').show(500);
+            }
+        });
+    }
+    $(window).resize(function() { //On Window resizeBy(
+        $cHeight = $('.o-content').outerHeight();
+        //console.log($cHeight);
+    });
+})(this);
+//baner
+$('#advertising').on('click', function() {
+    $('.advertising').slideToggle();
+});
+$(document).ready(function() {
+    setTimeout(function() {
+        $('.adv').removeClass('adv');
+    }, 1000);
+});
+</script>
+</body>
+</html>
