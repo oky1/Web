@@ -1,0 +1,28 @@
+<div class="container" style="margin-top: 10px">
+    <div class="row">
+        <div class="col-md-offset-1 col-lg-9 col-lg-offset-2 well">
+            <div class="alert alert-danger" ng-show="load_error_text">{{load_error_text}}</div>
+            <a href="#/" class="btn btn-primary" style="margin-bottom:20px">Вернуться к Списку</a>
+            <div class="well">
+                <ul data-ng-repeat="item in itemView" style="list-style-type:none; margin:0;padding:0">
+                    <li>Категория: {{item.category}}</li>
+                    <li><span class="text-primary">Заголовок: {{item.title}}</span></li>
+                    <li>Описание: {{item.description}}</li>
+                    <li>Дата подачи обьявления - {{item.date | filterDate }}</li>
+                    <li>
+                        <div class="row">
+                            <div class="col-xs-6 col-md-6 pull-left" ng-repeat="image in item.img  track by $index">
+                                <div class="thumbnail">
+                                    <img ng-src="uploads/{{image}}" alt="{{item.title}}">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <div  ng-include src="'partials/carousel/carousel.html'">
+        
+       </div> -->

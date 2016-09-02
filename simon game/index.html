@@ -1,416 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>simon game</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
-  <style>
-body {
-      background-color: #1d1f20;
-      margin:0;
-      padding:0;
-      text-align: center;
-}
-
-.container {
-      display: -webkit-flex;
-      display: flex;
-      -webkit-flex-direction: row;
-      flex-direction: row;
-      -webkit-align-items: center;
-      align-items: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-}
-    
-.align {
-      min-width: 300px;
-      min-height: 300px;
-      border-radius: 10px;
-}
-
-.align2 {
-    max-width: 550px;
-      margin: 0 auto;
-}
-.align3 {
-  max-width:300px; 
-  margin:0 auto;"
-}
-    
-.square {
-      font-size: 12em;
-      width: 1.2em;
-      height: 1.2em;
-      line-height: 1em;
-      float: left;
-      border-style: solid;
-      border-color: rgba(0,0,0, 0.3);
-      text-align: center;
-      cursor: default;
-      color: #00ffff;
-     /* opacity: 0.3;*/
-      cursor:pointer;
-}
-
-#a1 {background-color:red; border-top-left-radius: 50%;}
-#a2 {background-color:green; border-top-right-radius: 50%;}
-#b1 {background-color:blue ; border-bottom-left-radius: 50%;}
-#b2 {background-color:yellow; border-bottom-right-radius: 50%;}
-.bn {
-      margin:5px;
-      padding:5px; 
-      border-radius:2px;
-      border:none;
-      background-color: coral;
-      outline:none;
-      color:#333;
-      cursor:pointer;
- }
-
-.bn:hover {color:black;}
-.onOff {padding: 0 1.1em;}
-
-#modal{
-      padding:2px;
-      width: 70px;
-      height: 50px;
-      position: absolute;
-      left: 50%;
-      top: 320px; 
-      margin-left: -35px;
-      background-color: #fff;
-      z-index: 1;
-      border-radius: 50%;
-}
-
-.hide {display:none}
-.show {display:block;}
-
-.sco  {
-      margin:5px;
-      padding:5px; 
-      border-radius:2px;
-      border:none;
-}
-
-.score{color:#fff;}
-
-#particles-js {
-    position: absolute;
-    background-image: url("");
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
-    top:0
-}
-
-
-@media (max-width: 550px) {
-     .align {
-       min-width: 150px;
-       min-height: 150px
-     }
-     .square {
-       font-size: 6em
-     }
-     #modal{top:200px;}
-}
-</style>
+    <meta charset="UTF-8">
+    <title>simon game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
+    <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
-   <div id="particles-js"></div>
-		<div class="animated zoomIn">
+    <div id="particles-js"></div>
+    <div class="animated zoomIn">
         <h1>Simon game</h1>
         <div id="ie11_1">
-          <button class='bn' id="start" onclick='start()'>Start</button>
-          <button class='bn' id="reset" onclick='reset()'>Reset</button>
+            <button class='bn' id="start" onclick='start()'>Start</button>
+            <button class='bn' id="reset" onclick='reset()'>Reset</button>
         </div>
         <div class="container" id="container">
-             <div id='modal' class="hide">
+            <div id='modal' class="hide">
                 <p id="info">Wrong</p>
-              </div>
+            </div>
             <div class="align align2" id="align">
                 <div class="row">
                     <div class="square" value='0' id="a1"></div>
                     <div class="square" value='1' id="a2"></div>
-                    
                 </div>
                 <div class="row">
                     <div class="square" value='2' id="b1"></div>
                     <div class="square" value='3' id="b2"></div>
-                 </div>
-              </div>
+                </div>
+            </div>
         </div>
-           <div class="align3" id="ie11_2">
+        <div class="align3" id="ie11_2">
             <span class="sco">step<span id="stepScore" class="score">&#8194;0</span></span>
-          </div>
-          <div id="ie11_3">
+        </div>
+        <div id="ie11_3">
             <span class="score">Strict mode</span>
-  	        <button class='bn onOff' id="onButton" onclick='strictOn()'>on</button>
-  	        <button class='bn onOff' id="offButton" onclick='strictOff()'>off</button>
-         </div>
-	 </div>
-  <audio class="sound" preload="auto">
+            <button class='bn onOff' id="onButton" onclick='strictOn()'>on</button>
+            <button class='bn onOff' id="offButton" onclick='strictOff()'>off</button>
+        </div>
+    </div>
+    <audio class="sound" preload="auto">
         <source src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3" type="audio/mpeg">
-  </audio>
-  <audio class="sound" preload="auto">
+    </audio>
+    <audio class="sound" preload="auto">
         <source src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3" type="audio/mpeg">
-  </audio>
-  <audio class="sound" preload="auto">
+    </audio>
+    <audio class="sound" preload="auto">
         <source src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3" type="audio/mpeg">
-  </audio>
-  <audio class="sound" preload="auto">
+    </audio>
+    <audio class="sound" preload="auto">
         <source src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3" type="audio/mpeg">
-  </audio>
- 
+    </audio>
 </body>
 <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
- <script>
-  var square = document.getElementsByClassName('square');
-  var sound = document.getElementsByClassName('sound');
-  var stepScore = document.getElementById('stepScore');
-  var offButton = document.getElementById('offButton');
-  var startButton = document.getElementById('start');
-  var resetButton = document.getElementById('reset');
-  var onButton = document.getElementById('onButton');
-  var modal = document.getElementById('modal');
-  var particlesjs = document.getElementById('particles-js');
-  var info = document.getElementById('info');
-  var player = [];
- 	var counter = 0;
- 	var computer = [];
-  var strict = false
-  var timer = 750;
-  var delay = 350;
-
-
-//Ie 11
-var trident = !!navigator.userAgent.match(/Trident\/7.0/);
-var net = !!navigator.userAgent.match(/.NET4.0E/);
-var IE11 = trident && net;
-if(IE11){
-  container.className = '';
-  document.getElementById('ie11_1').style.paddingRight = '75px';
-  document.getElementById('ie11_2').style.paddingRight = '75px';
-  document.getElementById('ie11_3').style.paddingRight = '75px';
- }
-
-//Strict mode 
-function strictOn(){reset();strict=true; onButton.className = 'bn onOff animated tada'; offButton.className = 'bn onOff'}
-function strictOff(){reset();strict=false; offButton.className = 'bn onOff animated tada'; onButton.className = 'bn onOff'}
-
-//random n
-function randomN() {
-    var n = Math.floor(Math.random() * 4);
-    return n;
-}
-
-// start
-function start(){
-  startButton.disabled = true;
-  startButton.className = 'bn animated tada';
-  resetButton.className = 'bn';
-  counter++;
-  stepScore.innerHTML = '&#8194;' + counter;
-  if(counter == 21){
-      info.innerHTML = 'You win';
-      modal.className = 'show animated tada'; 
-      reset();
-      setTimeout(function(){
-        modal.className = 'hide';
-        info.innerHTML = 'Wrong';},3000)
-    }
-  //else if(counter>10){timer=600; delay = 300;}
-  n = randomN();
-  computer.push(n);
-  displaySquare();
- }
-
-//comp turn
-function displaySquare(){
-    off()
-    player = computer.slice();
-    computer.map(function(num,i){
-    var iCount = i+1;
-    setTimeout(function(){square[num].className ='square animated tada'; sound[num].play()},timer*iCount);
-    setTimeout(function(){square[num].className ='square';},(timer*iCount)+delay);
-  })
-setTimeout(function(){on()},(computer.length*timer)+delay);
-};
-
-function off(){
-  for (var i = 0; i < square.length; i++) {
-  square[i].removeEventListener('click', squareFunction, false)};
-}
-
-//player turn
-function on(){
-  for (var i = 0; i < square.length; i++) {
-  square[i].addEventListener('click', squareFunction, false)};
-}
-
-function reset(){
-  startButton.disabled = false;
-  startButton.className = 'bn';
-  resetButton.className = 'bn animated tada';
-  computer = []; counter = 0; stepScore.innerHTML = '&#8194;' + counter;
-  timer = 750; delay = 350;
-  off();
-  player = [];
-}
-
-function squareFunction() {
-  var squareVal = this.getAttribute("value");
-  var target = document.getElementById(this.id);
-  var button =  player.shift();
-  if(squareVal !=button){
-    //you wrong!!!
-    if(strict === true){
-      reset();
-      start();
-    }
-    modal.className = 'show animated tada';
-    setTimeout(function(){ modal.className = 'hide'},timer) 
-    player.unshift(button);
-    displaySquare()
-  } else {
-     target.className = 'square animated tada';
-     sound[squareVal].play();
-     setTimeout(function(){target.className = 'square';},delay);
-     //You survive
-     if(player.length ==0){
-        setTimeout(function(){start()},timer);
-        color = getRandomColor();
-        particlesjs.style.backgroundColor = color}
-     }  
-  }
-
-  //main background
-  function getRandomColor() {
-    var letters = '0123456789ABCDEF';
-    var color = '#';
-    for (var i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-}
-
-particlesJS("particles-js",
- {
-  "particles": {
-    "number": {
-      "value": 40,
-      "density": {
-        "enable": false,
-        "value_area": 800
-      }
-    },
-    "color": {
-      "value": "ff7f50"
-    },
-    "shape": {
-      "type": "star",
-      "stroke": {
-        "width": 0,
-        "color": "#000000"
-      },
-      "polygon": {
-        "nb_sides": 5
-      },
-      "image": {
-        "src": "img/github.svg",
-        "width": 100,
-        "height": 100
-      }
-    },
-    "opacity": {
-      "value": 0.2,
-      "random": false,
-      "anim": {
-        "enable": false,
-        "speed": 1,
-        "opacity_min": 0.1,
-        "sync": false
-      }
-    },
-    "size": {
-      "value": 30,
-      "random": true,
-      "anim": {
-        "enable": false,
-        "speed": 40,
-        "size_min": 0.1,
-        "sync": false
-      }
-    },
-    "line_linked": {
-      "enable": false,
-      "distance": 150,
-      "color": "#ffffff",
-      "opacity": 0.4,
-      "width": 1
-    },
-    "move": {
-      "enable": true,
-      "speed": 3,
-      "direction": "none",
-      "random": false,
-      "straight": false,
-      "out_mode": "out",
-      "bounce": false,
-      "attract": {
-        "enable": false,
-        "rotateX": 600,
-        "rotateY": 1200
-      }
-    }
-  },
-  "interactivity": {
-    "detect_on": "canvas",
-    "events": {
-      "onhover": {
-        "enable": false,
-        "mode": "repulse"
-      },
-      "onclick": {
-        "enable": false,
-        "mode": "push"
-      },
-      "resize": true
-    },
-    "modes": {
-      "grab": {
-        "distance": 400,
-        "line_linked": {
-          "opacity": 1
-        }
-      },
-      "bubble": {
-        "distance": 400,
-        "size": 40,
-        "duration": 2,
-        "opacity": 8,
-        "speed": 3
-      },
-      "repulse": {
-        "distance": 200,
-        "duration": 0.4
-      },
-      "push": {
-        "particles_nb": 4
-      },
-      "remove": {
-        "particles_nb": 2
-      }
-    }
-  },
-  "retina_detect": true
-}
-);
-  
-</script>
+<script src="main.js"></script>
 
 </html>
-
-

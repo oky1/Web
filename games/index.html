@@ -8,9 +8,11 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="min/min-css/min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
-    <style>body{font-family: 'Roboto', sans-serif!important;  font-size: 16px;}</style>
+    <style>@media all and (-ms-high-contrast:none)
+     {
+     body { font-family: 'Roboto', sans-serif!important; } /* IE10 */
+     *::-ms-backdrop, body { font-family: 'Roboto', sans-serif!important; } /* IE11 */
+     }</style>
 </head>
 <body data-ng-app='myApp' data-ng-controller='myCtrl'>
     <div class="title-bar">
@@ -92,7 +94,7 @@
             <p class="subheader">Find arcade games, puzzle games, funny games, sports games, shooting. 
             Search news, reviews, previews, movies, computer and console video games.</p>
             <a href="#search-row" class="button">Lets search</a>
-            <a href="#search-row" class="button">Lets find</a>
+            <a href="http://codepen.io/oky/full/QEZmyE" class="button" target='_blank'>Play tic-tac-toe</a>
         </div>
         <div class="show-for-large large-3 columns">
             <img class="animated fadeIn" src="min/min-img/logo-blue.jpg" alt="logo-blue">
@@ -159,88 +161,9 @@
         </div>
     </footer>
     <!--footer-->
-    <!--<script src='min/min-js/all.min.js'></script>-->
-    <script>
-//moove background
-$('body').mousemove(function(e) {
-    var x = (e.pageX * -1 / 5),
-        y = (e.pageY * -1 / 5);
-    $(this).css('background-position', x + 'px ' + y + 'px');
-});
-//get data
-angular.module('myApp', [])
-    .controller('myCtrl', ['$scope', '$http', function($scope, $http) {
-        // $scope.search = {};
-        $scope.$watch('search.searchByGiantbomb', function() {
-            $scope.find = "resources=game";
-            $http.jsonp("http://www.giantbomb.com/api/search/?api_key=ab526aeb8927f41a3a0c9ae8a048082af18a7f97&format=jsonp&limit=45&" + $scope.find + "&query=" + $scope.search.searchByGiantbomb + "&json_callback=JSON_CALLBACK").success(function(data) {
-                $scope.games = [];
-                for (i = 0; i < data.results.length; i++) {
-                    $scope.games.push(data.results[i]);
-                    //console.log(data);
-                }
-                //console.log($scope.games);
-            });
-        });
-        $scope.currentPage = 0;
-        $scope.pageSize = 9;
-        $scope.data = [];
-        $scope.numberOfPages = function() {
-            return Math.ceil($scope.data.length / $scope.pageSize);
-        };
-        for (var i = 0; i < 45; i++) {
-            $scope.data.push("Item Number " + i);
-        }
-    }]).
-filter('startFrom', function() {
-    return function(input, start) {
-        if (!input || !input.length) {
-            return;
-        }
-        start = +start; //parse to int
-        return input.slice(start);
-    };
-});
-// offCanvas
-(function(w) {
-    var $container = $('.offcanvas-top'),
-        $cHeight = $('.o-content').outerHeight();
-    $(document).ready(function() {
-        buildCanvas();
-    });
-
-    function buildCanvas() {
-        $('<a href="#" id="trigger">More +</a>').appendTo($container);
-
-        $('#trigger').bind('click', function(e) {
-            e.preventDefault();
-            var $this = $(this);
-            $container.toggleClass('active');
-            if ($container.hasClass('active')) {
-                $container.height($cHeight);
-                $this.text('Hide -');
-                $('h5').hide();
-            } else {
-                $container.height(50);
-                $this.text('More +');
-                $('h5').show(500);
-            }
-        });
-    }
-    $(window).resize(function() { //On Window resizeBy(
-        $cHeight = $('.o-content').outerHeight();
-        //console.log($cHeight);
-    });
-})(this);
-//baner
-$('#advertising').on('click', function() {
-    $('.advertising').slideToggle();
-});
-$(document).ready(function() {
-    setTimeout(function() {
-        $('.adv').removeClass('adv');
-    }, 1000);
-});
-</script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+    <script src='min/min-js/all.min.js'></script>
 </body>
 </html>
+				

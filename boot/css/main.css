@@ -1,0 +1,187 @@
+    a {
+        cursor: pointer;
+        text-decoration: none!important;
+    }
+    
+    .main {
+        /* height: 100%;
+        position: relative;*/
+        transition-property: transform;
+    }
+    /* Sidebar */
+    
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 260px;
+        -webkit-transform: translate3d(-260px, 0, 0);
+        transform: translate3d(-260px, 0, 0);
+        transition-property: transform;
+    }
+    
+    .hamburger {
+        display: block;
+        position: fixed;
+        left: 3px;
+        top: 3.5px;
+        cursor: pointer;
+        z-index: 10;
+        border-radius: 5px;
+        background-color: #3498db;
+        border: 2px solid #ddd;
+        padding: 10px 7px;
+        width: 82px;
+        height: 45px;
+        transition-property: background-color, border-color;
+    }
+    /* Animation */
+    
+    .main,
+    .sidebar,
+    .hamburger {
+        transition-duration: 0.3s;
+        transition-timing-function: cubic-bezier(.694, .0482, .335, 1);
+    }
+    /* Show Sidebar */
+    
+    .show-sidebar .main {
+        -webkit-transform: translate3d(260px, 0, 0);
+        transform: translate3d(260px, 0, 0);
+    }
+    
+    .show-sidebar .sidebar {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    
+    .show-sidebar .hamburger {
+        background-color: #282d36;
+        border-color: #0f1114;
+    }
+    
+    @media (max-width: 767px) {
+        .sidebar {
+            z-index: 10 !important;
+        }
+    }
+    /* for top-nav - not for canvass-menu*/
+    /* animate css */
+    
+    .animated-class.ng-enter {
+        -webkit-animation: zoomIn 1s;
+        -moz-animation: zoomIn 1s;
+        -ms-animation: zoomIn 1s;
+        animation: zoomIn 1s;
+    }
+    
+    .animated-class.ng-leave {
+        -webkit-animation: slideOutDown 0.2s;
+        -moz-animation: slideOutDown 0.2s;
+        -ms-animation: slideOutDown 0.2s;
+        animation: slideOutDown 0.2s;
+    }
+    /* animate css */
+    /* upload */
+    
+    .my-drop-zone {
+        border: dotted 1px lightgray!important;
+    }
+    
+    .nv-file-over {
+        border: dotted 1px red!important;
+    }
+    
+    .another-file-over-class {
+        border: dotted 1px green!important;
+    }
+    
+    .btn-file {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .btn-file input[type=file] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: 100%;
+        min-height: 100%;
+        font-size: 100px;
+        text-align: right;
+        filter: alpha(opacity=0);
+        opacity: 0;
+        outline: none;
+        background: white;
+        cursor: inherit;
+        display: block;
+    }
+    
+    canvas {
+        background-color: #f3f3f3;
+        /*  -webkit-box-shadow: 3px 3px 3px 0 #e3e3e3;
+        -moz-box-shadow: 3px 3px 3px 0 #e3e3e3;
+        box-shadow: 3px 3px 3px 0 #e3e3e3;*/
+        border: 1px solid #c3c3c3;
+        height: 100px;
+        margin: 6px 0 0 6px;
+    }
+
+    /* upload */
+    
+    button:active,
+    button:focus {
+        outline: none!important;
+    }
+
+    @media (min-width: 600px) {
+         @-moz-document url-prefix() {
+            .col-md-9.well{width:60%!important;}
+        }
+        
+    }
+    
+    @media (min-width: 767px) {
+        .pull-right-lg {
+            float: right;
+        }
+        #form-second{display:none;}
+        #form-first{display:block;}
+        @-moz-document url-prefix() {
+            #textArea {width:85%!important;}
+        }
+         @-moz-document url-prefix() {
+            #inputTitle {width:85%!important;}
+        }
+      
+    }
+    @media (max-width: 1000px){
+        @-moz-document url-prefix() {
+            .col-md-3{ width:80%!important}
+        }
+    }
+    
+    @media (max-width: 767px) {
+        .text-center-sm {
+            text-align: center
+        }
+        #form-first{display:none;}
+     }
+    
+    @media (max-width: 600px) {
+        h2 {font-size:1.3em!important}
+        .blur {
+            -webkit-filter: blur(1px);
+            -o-filter: blur(1px);
+            filter: blur(1px);
+        }
+    }
+    @media (max-width: 400px){
+      h2 {font-size:1em!important}
+      .text-primary {font-size: 0.7em!important}
+      .well {padding:1px!important}
+    }
+ 
+
+								

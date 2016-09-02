@@ -1,0 +1,251 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500);
+body {
+    background: gold;
+    font-family: 'Roboto', sans-serif!important;
+}
+
+#particles-js {
+    position: absolute;
+    background-image: url("");
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+* {
+    transition: All 1s ease;
+    -webkit-transition: All 1s ease;
+    -moz-transition: All 1s ease;
+    -o-transition: All 1s ease;
+}
+
+.container1,
+.container2,
+.container3 {
+    border-radius: 5px;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.container1 {
+    background: #fff;
+    margin-top: 170px;
+}
+
+.container2 {
+    background: transparent;
+}
+
+.container3 {
+    background: #fff;
+}
+
+.myMovie {
+    background: #fff;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+}
+
+
+/*icons and forms */
+
+#iconS {
+    background-color: transparent;
+    color: #fff;
+    border-radius: 5px;
+    position: absolute;
+    top: 42px;
+    right: 500px;
+}
+
+.form-control {
+    height: 35px;
+    width: 400px!important;
+    border-top-right-radius: 5px!important;
+    border-bottom-right-radius: 5px!important;
+}
+
+#formContr {
+    position: absolute;
+    top: 45px;
+    right: 100px;
+}
+
+#iconR {
+    position: relative;
+}
+
+@media only screen and (max-width: 520px) {
+    .form-control {
+        width: 200px!important
+    }
+    #iconS {
+        right: 300px
+    }
+}
+
+.fa {
+    font-size: 20px;
+    padding: 5px;
+}
+
+.input-group-addon {
+    height: 25px
+}
+
+
+/* buttons */
+
+.menu-button {
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    transition: 0.4s;
+    position: absolute;
+    right: 50px;
+    top: 30px;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 50%;
+    background-color: #E91E63;
+    color: #FFFFFF;
+    font-size: 24px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.22);
+    cursor: pointer;
+    z-index: 9999999;
+}
+
+.menu-button:hover {
+    background: #d81558;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.28), 0 4px 15px 0 rgba(0, 0, 0, 0.25);
+}
+
+.menu-button a {
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    transition: 0.4s;
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    color: #FFFFFF;
+    font-size: 24px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.22);
+    cursor: pointer;
+}
+
+.menu-button a:hover {
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.28), 0 4px 15px 0 rgba(0, 0, 0, 0.25);
+}
+
+.menu-button a:nth-child(2),
+.menu-button a:nth-child(3),
+.menu-button a:nth-child(4),
+.menu-button a:nth-child(5) {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+
+.menu-button:hover a:nth-child(2):hover,
+.menu-button:hover a:nth-child(3):hover,
+.menu-button:hover a:nth-child(4):hover,
+.menu-button:hover a:nth-child(5):hover {
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.menu-button:hover a:nth-child(2):hover {
+    background: #3ea1ec;
+}
+
+.menu-button:hover a:nth-child(3):hover {
+    background: #d83a2b;
+}
+
+.menu-button:hover a:nth-child(4):hover {
+    background: #323232;
+}
+
+.menu-button:hover a:nth-child(5):hover {
+    background: #2D1152;
+}
+
+.menu-button a:nth-child(2) {
+    -webkit-transition-delay: 0.3s;
+    -moz-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+    background: #55acee;
+}
+
+.menu-button a:nth-child(3) {
+    -webkit-transition-delay: 0.4s;
+    -moz-transition-delay: 0.4s;
+    transition-delay: 0.4s;
+    background: #dc4e41;
+}
+
+.menu-button a:nth-child(4) {
+    -webkit-transition-delay: 0.5s;
+    -moz-transition-delay: 0.5s;
+    transition-delay: 0.5s;
+    background: #3F3F3F;
+}
+
+.menu-button a:nth-child(5) {
+    -webkit-transition-delay: 0.2s;
+    -moz-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+    background: #2D1152;
+}
+
+.menu-button:hover a {
+    opacity: 1;
+    width: 50px;
+    height: 50px;
+}
+
+.menu-button:hover a:nth-child(2) {
+    right: 130px;
+    top: 70px;
+}
+
+.menu-button:hover a:nth-child(3) {
+    right: 65px;
+    top: 70px;
+}
+
+.menu-button:hover a:nth-child(4) {
+    right: 0px;
+    top: 70px;
+}
+
+.menu-button:hover a:nth-child(5) {
+    right: 195px;
+    top: 70px;
+}
+
+
+/*flickr img*/
+
+.main-column {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+}
+
+
+/* line 164, main.scss */
+
+.main-repeat {
+    position: relative;
+    -moz-column-break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    column-break-inside: avoid;
+    padding: 10px 20px 10px 20px;
+}

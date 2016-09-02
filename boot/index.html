@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" id="ng-app" ng-app="app" ng-controller="mainCtrl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>bootswatch</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="css/bootswatch/united.css">
+    <link rel="stylesheet" ng-href="css/bootswatch/{{layout}}.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
+</head>
+
+<body ng-cloak>
+    <div>
+        <ng-view></ng-view>
+    </div>
+   <!--  <script src="http://nervgh.github.io/js/es5-sham.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-animate.min.js"></script>
+    <!-- for date -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/locale/ru.js"></script>
+    <!-- for auth -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/satellizer/0.14.0/satellizer.js"></script>
+    <!-- app -->
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+    <script src="partials/content/contentCtrl.js"></script>
+    <script src="js/itemsFactory.js"></script>
+    <script src="layoutFactory.js"></script>
+    <script src="partials/view/viewCtrl.js"></script>
+    <script src="partials/note/noteCtrl.js"></script>
+    <script src="partials/edit/editCtrl.js"></script>
+    <script src="partials/login/loginCtrl.js"></script>
+   
+   <!--  <script src="partials/carousel/carouselCtrl.js"></script> -->
+    <!-- for upload -->
+  
+    <script src="partials/form/upload/upload_libs/angular-file-upload.min.js"></script>
+    <script src="partials/form/upload/upload_libs/console-sham.min.js"></script>
+    <script src="partials/form/upload/uplCtrl.js"></script>
+    <script src="partials/form/upload/uplDirect.js"></script>
+</body>
+
+</html>

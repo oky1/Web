@@ -1,0 +1,20 @@
+ <div class="container" style="margin-top: 5px">
+        <div class="row">
+            <div class="well text-center-sm"> <a href="/boot/#/" class="btn btn-default">Вернуться к Списку</a><span class="text-primary" style="margin: 10px; font-size: 1.1em; vertical-align:middle"> Заметки</span></div>
+            <div class="col-md-6">
+                <div class="well">
+                    <a href="/boot/#/" class="list-group-item">Добро пожаловать на сайт</a>
+                    <div class="list-group-item" data-ng-repeat="note in notes">
+                        <a href="#/item/{{note.id}}">{{note.title}}</a>
+                        <a data-ng-click="notes.splice($index,1)"><span class="glyphicon glyphicon-trash" style="position: absolute; right:10px; top:15px; width:30px">
+                    </span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6  alert-warning" style="padding:1.35em">
+                <div class="list-group-item">Здесь мог бы быть банер</>
+            </div>
+         
+        </div>
+    </div>
+</div>

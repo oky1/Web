@@ -1,0 +1,120 @@
+<div ng-cloak class='animated fadeIn'>
+    <!-- nav -->
+    <nav ng-model="topnavbar" class="navbar {{ topnavbar }}" style="z-index: 10">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse pull-right-lg" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#/note">Заметки<span class="sr-only"></span></a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> Настройки<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li class="breadcrumb">
+                                <label class="control-label">
+                                    Цвет меню:</label>
+                                <label class="small">
+                                    <input type="radio" ng-model="topnavbar" value="navbar-default" /> Первичный цвет
+                                </label>
+                                <label class="small">
+                                    <input type="radio" ng-model="topnavbar" value="navbar-inverse" /> Вторичный цвет
+                                </label>
+                            </li>
+                            <li class="breadcrumb">Цвет сайта:</li>
+                            <li class="animated fadeIn" ng-model="layout" ng-repeat="layout in layouts">
+                                <a ng-click="setlayout(layout.state)">{{layout.name}}</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-left" id="form-first" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" data-ng-model="search" placeholder="Поиск" />
+                    </div>
+                    <button type="submit" class="btn btn-default">Искать</button>
+                </form>
+                <form class="navbar-form navbar-left" id="form-second" role="search">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control" data-ng-model="search" placeholder="Поиск" />
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">Искать</button>
+                             </span>
+                        </div>
+                    </div>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#/login">
+                            <span class="glyphicon glyphicon-user"></span> Логин</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="contain" ng-class="{true: 'show-sidebar'}[hamburger]">
+        <main class="main" ng-click="hidesidebar()" ng-class="{true: 'blur'}[hamburger]" role="main">
+            <section class="content">
+                <div class="container">
+                    <div class="row">
+                        <div class="well text-center-sm">
+                            <span>Категория:</span><span class="text-primary" style="margin: 10px">{{currentCategory}}</span>
+                            <button class="btn btn-default" ng-click="show= !show; resetForm()">{{show? 'Скрыть форму' : 'Добавить обьявление'}}</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="jumbotron animated-class" ng-if="show">
+                            <div ng-include src="'partials/form/form.html'"></div>
+                        </div>
+                        <div>
+                            <ul style="list-style-type: none; padding:5px; margin:0" >
+                                <li class="col-md-6" ng-repeat="item in categories.items | orderBy : 'date' | filter: search | filter:{category: currentCategory} :true :strict" style=" padding:5px">
+                                    <div class="well" style="min-height: 140px; margin:0">
+                                         <a href="#/item/{{item.id}}">
+                                        <img ng-src="uploads/{{item.img[0]}}" width="100" height="100" alt="" class="pull-left" style="margin-right: 10px" /></a>
+                                        <a href="#/item/{{item.id}}"><h4>{{item.title}}</h4></a> {{item.date | filterDate }}
+                                        <p>{{item.description}}</p>
+                                        <div class="text-left">
+                                            <a ng-click="addNote(item.title, item.id)"><span class="glyphicon glyphicon-star"></span></a>
+                                            <a href="#/edit/{{item.id}}"><span class="glyphicon glyphicon-pencil"></span></a>
+                                            <a ng-click="categories.items.splice(categories.items.indexOf(item),1)"><span class="glyphicon glyphicon-trash"></span></a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <aside class="sidebar well">
+            <ul class="nav  list-group " style="margin-top: 50px" ng-class="">
+                <li ng-repeat="category in categories track by $index" ng-class="{active: isCurrentCategory(category), true: 'animated pulse'}[hamburger]">
+                    <a class="list-group-item" ng-click="setCurrentCategory(category)"><span class="text-primary">{{category}}</span>
+                 <span class="glyphicon glyphicon-trash" data-ng-click="categories.splice($index,1)" style="position: absolute; right:10px; top:15px"></span></a>
+                </li>
+                <li>
+                    <div class="form-group">
+                        <label class="control-label">Создать категорию</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" data-ng-model="add_cat" />
+                            <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-pencil" type="button" data-ng-click="addCategory(add_cat); add_cat = null" style="cursor:pointer"></span>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </aside>
+    </div>
+    <button class="hamburger btn btn-default" ng-click="hamburger = !hamburger" style="border-bottom-right-radius: 20px">{{hamburger? 'Закрыть' : 'Открыть'}}
+    </button>
+</div>

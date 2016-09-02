@@ -1,0 +1,16 @@
+[{
+    "name": "Бело-синий",
+    "state": "spacelab"
+}, {
+    "name": "Бумага",
+    "state": "paper"
+}, {
+    "name": "Темный",
+    "state": "slate"
+}, {
+    "name": "Оранжевый",
+    "state": "united"
+}, {
+    "name": "Небесный",
+    "state": "cerulean"
+}]
